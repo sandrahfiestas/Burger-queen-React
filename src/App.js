@@ -19,7 +19,7 @@ function App() {
     <Router>
       <Switch>
       
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
 
@@ -35,6 +35,15 @@ function App() {
     </Router>
   );
 }
+
+
+// function Test() {
+//   return (
+//     <div>
+//       <p>TEST</p>
+//     </div>
+//   )
+// }
 
 
 // function App() {
