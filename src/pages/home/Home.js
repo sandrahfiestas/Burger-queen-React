@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../../images/logo.png';
+import logo from './images/logo.png';
 import './Home.css';
 
 
@@ -11,10 +11,10 @@ return (
         <img src={logo} className="" alt="logo" />
             <div>
                 <Link to="/breakfast">
-                    <button type="button">MENÚ</button>
+                    <button className="button">MENÚ</button>
                 </Link>
                 <Link to="/kitchen">
-                    <button type="button">COCINA</button>
+                    <button className="button">COCINA</button>
                 </Link>
             </div>
     </div>

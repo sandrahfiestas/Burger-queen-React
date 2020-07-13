@@ -2,10 +2,10 @@ import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
 import './globals.css';
-import Home from './page/home/Home';
-import Breakfast from './page/breakfast/Breakfast';
+import Home from './pages/home/Home';
+import Breakfast from './pages/breakfast/Breakfast';
 // import LunchDinner from './page/lunch_dinner/Lunch-dinner';
-import Kitchen from './page/kitchen/Kitchen';
+import Kitchen from './pages/kitchen/Kitchen';
 import {
   BrowserRouter as Router,
   Switch,
