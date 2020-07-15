@@ -9,7 +9,7 @@ function Home() {
 return (
     <div className="home-container">
         <img src={logo} className="logo" alt="logo" />
-            <div className="btns-home">
+            <div>
                 <Link to="/breakfast">
                     <button className="button">MENÚ</button>
                 </Link>
