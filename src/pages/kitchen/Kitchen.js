@@ -2,7 +2,6 @@ import React from 'react';
 import './Kitchen.css';
 
 function Kitchen() {
-
     return (
         <div className="kitchen">
             
@@ -12,7 +11,6 @@ function Kitchen() {
     
          </div>
       );
-
 }
 
 export default Kitchen;
