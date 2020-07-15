@@ -1,7 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
 // import './App.css';
-import './globals.css';
+// import './globals.css';
 import Home from './pages/home/Home';
 import Breakfast from './pages/breakfast/Breakfast';
 // import LunchDinner from './page/lunch_dinner/Lunch-dinner';
