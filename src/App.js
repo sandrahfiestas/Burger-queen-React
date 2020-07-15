@@ -1,11 +1,12 @@
 import React from 'react';
+import './App.css';
 // import logo from './logo.svg';
 // import './App.css';
 // import './globals.css';
-import Home from './pages/home/Home';
-import Breakfast from './pages/breakfast/Breakfast';
+import Home from './pages/home/Home.js';
+import Breakfast from './pages/breakfast/Breakfast.js';
 // import LunchDinner from './page/lunch_dinner/Lunch-dinner';
-import Kitchen from './pages/kitchen/Kitchen';
+import Kitchen from './pages/kitchen/Kitchen.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,12 +14,10 @@ import {
   // Link
 } from "react-router-dom";
 
-
 function App() {
   return (
     <Router>
       <Switch>
-      
         <Route exact path="/">
           <Home />
         </Route>
@@ -28,6 +27,7 @@ function App() {
         </Route>
 
         <Route path="/kitchen">
+
         <Kitchen />
         </Route>
 
@@ -82,3 +82,4 @@ function App() {
 // }
 
 export default App;
+

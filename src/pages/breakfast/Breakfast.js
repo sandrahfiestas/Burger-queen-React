@@ -2,8 +2,16 @@ import React from 'react';
 import './Breakfast.css';
 
 function Breakfast() {
-    return <p>COMPONENTE2 : Soy el desayuno!!!!</p>
+    return (
+        <div className="breakfast">
+            
+            <div className="container">
+            <p>Desayunando</p>
+            </div>
     
+         </div>
+      );
+
 }
 
 export default Breakfast;

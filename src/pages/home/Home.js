@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-// import background from '../../images/background.jpg';
 import logo from '../../images/logo.png';
 import './Home.css';
 
@@ -22,4 +21,3 @@ return (
 }
 
 export default Home;
-
