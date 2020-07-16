@@ -1,15 +1,21 @@
-body {
-   background-image: url("../../images/background.jpg"); 
-}
+ * {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+} 
 
-/* .button {
-    padding: 10px;
-    background: #EAE2B7;
-    color: #000000;
-    margin: 5px;
-    border-radius: 7px;
-    font-weight: bold;
-} */
+body {
+    background-image: url("../../images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    flex-direction: column;
+} 
+
+.logo {
+    width: 45%;
+    height: 45%;
+}
 
 .container {
     display: flex;
@@ -34,9 +40,4 @@ body {
     font-size: 28px;
     font-weight: bold;
 }
-
-
-
-
-
 
