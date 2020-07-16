@@ -1,6 +1,8 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../images/logo.png';
+import icon_menu from '../../images/icon_menu.png';
+import icon_burger from '../../images/icon_burger.png'
 import './Home.scss';
 
 
@@ -12,10 +14,16 @@ return (
         </div>
         <div className="home-btns">
             <Link to="/breakfast">
-                <button className="button">MENÚ</button>
+                <button className="button">
+                    <img src={icon_menu} className="icon-home" alt="icon_menu" />
+                     MENÚ
+                </button>
             </Link>
             <Link to="/kitchen">
-                <button className="button">COCINA</button>
+                <button className="button">
+                    <img src={icon_burger} className="icon-home" alt="icon_burger" />
+                    COCINA
+                </button>
             </Link>
         </div>
     </div>
