@@ -10,7 +10,7 @@ function Home() {
 return (
     <div className="home-container">
         <div className="home-logo">
-            <img src={logo} className="logo" alt="logo" />
+            <img src={logo} className="logo-queen" alt="logo" />
         </div>
         <div className="home-btns">
             <Link to="/breakfast">
