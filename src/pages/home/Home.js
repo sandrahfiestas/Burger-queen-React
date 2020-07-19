@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../images/logo.png';
 import icon_menu from '../../images/icon_menu.png';
-import icon_burger from '../../images/icon_burger.png'
+import icon_burger from '../../images/icon_burger.png';
 import './Home.scss';
 
 
