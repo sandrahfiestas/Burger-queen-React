@@ -44,7 +44,9 @@ function Breakfast() {
             <img src={coffee} className="breakfast-product" alt="coffee" />
             <p>Café americano</p>
             <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
+              <button>
+                <img src={iconLess} className="icons-more-less" alt="icon_less" />
+              </button>
               S/5.00
               <img src={iconMore} className="icons-more-less" alt="icon_more" />
             </div>
