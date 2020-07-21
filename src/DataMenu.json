@@ -1,0 +1,111 @@
+[
+    {
+        "menuDesayuno": {
+            "products": [
+                {
+                    "id": "ca",
+                    "nombre": "Café americano",
+                    "valor": "5"
+                },
+                {
+                    "id": "cl",
+                    "nombre": "Café con leche",
+                    "valor": "7"
+                },
+                {
+                    "id": "sjd",
+                    "nombre": "Sandwich de jamon y queso",
+                    "valor": "10"
+                },
+                {
+                    "id": "jf",
+                    "nombre": "Jugo de frutas natural",
+                    "valor": "7"
+                }
+            ]
+        },
+        "menuAlmuerzoCena": {
+            "Hamburguesas": [
+                {
+                    "id": "hsr",
+                    "nombre": "Hamburguesa simple de res",
+                    "valor": "10"
+                },
+                {
+                    "id": "hsp",
+                    "nombre": "Hamburguesa simple de pollo",
+                    "valor": "10"
+                },
+                {
+                    "id": "hsv",
+                    "nombre": "Hamburguesa simple vegetariana",
+                    "valor": "10"
+                },
+                {
+                    "id": "hdr",
+                    "nombre": "Hamburguesa doble de res",
+                    "valor": "15"
+                },
+                {
+                    "id": "hdp",
+                    "nombre": "Hamburguesa doble de pollo",
+                    "valor": "15"
+                },
+                {
+                    "id": "hdv",
+                    "nombre": "Hamburguesa doble vegetariana",
+                    "valor": "15"
+                }
+            ],
+
+            "Acompañamientos": [
+                {
+                    "id": "pf",
+                    "nombre": "Papas fritas",
+                    "valor": "5"
+                },
+                {
+                    "id": "ac",
+                    "nombre": "Aros de cebolla",
+                    "valor": "5"
+                }
+            ],
+
+            "Bebidas": [
+                {
+                    "id": "agx",
+                    "nombre": "Agua 500 ml",
+                    "valor": "5"
+                },
+                {
+                    "id": "agm",
+                    "nombre": "Agua 750ml",
+                    "valor": "7"
+                },
+                {
+                    "id": "gsx",
+                    "nombre": "Gaseosa 500ml",
+                    "valor": "7"
+                },
+                {
+                    "id": "gsm",
+                    "nombre": "Gaseosa 750ml",
+                    "valor": "10"
+                }
+            ],
+            "extras": [
+                {
+                    "id": "eq",
+                    "nombre": "Queso",
+                    "valor": "1"
+                },
+                {
+                    "id": "eh",
+                    "nombre": "Huevo",
+                    "valor": "1"
+                }
+               
+            ]
+        }
+    }
+]
