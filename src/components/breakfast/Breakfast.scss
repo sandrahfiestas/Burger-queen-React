@@ -3,7 +3,7 @@ body {
 }
 
 nav {
-  width: 200px;
+  width: 400px;
 }
 
 .nav-toolbar {
@@ -104,19 +104,12 @@ nav {
   border: 3px solid #ffffff;
 }
 
-
-
-
 .container-breakfast {
     height: 100vh;
-    // display: flex;
-    // align-items: center;
     display: grid;
     grid-template-columns: 50% 50%;
     margin: 5%;
     gap: 2em;
-    
-
  }
  
 .breakfast-menu {
@@ -127,7 +120,6 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
-
 }
 
 .breakfast-item {
@@ -149,8 +141,7 @@ nav {
     background-color: white;
     display: grid;
     grid-template-columns: 2fr 0.5fr 1fr 1fr;
-    grid-template-rows: 0.5fr 0.2fr 1fr 0.5fr;
-    
+    grid-template-rows: 0.5fr 0.2fr 1fr 0.5fr;  
 }
 
 .item-client {
