@@ -1,5 +1,4 @@
 import React from 'react';
-// import data from '../firebase/firebase';
 import './Breakfast.scss';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
@@ -10,7 +9,6 @@ import Item from '../components/Item';
 // import sandwich from '../../images/sandwich.jpg';
 // import iconMore from '../../images/icon_more.png';
 // import iconLess from '../../images/icon_less.png';
-// import products from '../products.json';
 
 function Breakfast() {
   return (
@@ -43,48 +41,7 @@ function Breakfast() {
 
       <div className="container-breakfast">
         <div className="breakfast-menu">
-          <Item product="latte" />
-          {/* <div className="breakfast-item">
-            <img src={coffee} className="breakfast-product" alt="coffee" />
-            <p>Café americano</p>
-            <div>
-              <button>
-                <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              </button>
-              S/5.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div> */}
-          {/* <div className="breakfast-item">
-            <img src={latte} className="breakfast-product" alt="latte" />
-            <p>Café con leche</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/7.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div>
-          <div className="breakfast-item">
-            <img src={juice} className="breakfast-product" alt="juice" />
-            <p>Jugo de frutas</p>
-            <p>natural</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/10.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div>
-          <div className="breakfast-item">
-            <img src={sandwich} className="breakfast-product" alt="sandwich" />
-            <p>Sandwich de</p>
-            <p>jamón y queso</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/7.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div>
-         */}
+          <Item />
         </div>
 
         <div className="breakfast-ticket-btn">
