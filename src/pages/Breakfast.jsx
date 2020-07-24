@@ -1,8 +1,8 @@
 import React from 'react';
 import './Breakfast.scss';
-import Item from '../components/Item';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
+import Item from '../components/Item';
 // import coffee from '../../images/coffee.jpg';
 // import latte from '../../images/latte.jpg';
 // import juice from '../../images/juice.jpg';
@@ -41,46 +41,10 @@ function Breakfast() {
 
       <div className="container-breakfast">
         <div className="breakfast-menu">
-          <Item product="late" />
-          {/* <div className="breakfast-item">
-            {/* <img src={coffee} className="breakfast-product" alt="coffee" />
-            <p>Café americano</p>
-            <div>
-              <button><img src={iconLess} className="icons-more-less" alt="icon_less" /></button>
-              S/5.00
-              <button><img src={iconMore} className="icons-more-less" alt="icon_more" /></button>
-            </div>
-          </div>
-          <div className="breakfast-item">
-            <img src={latte} className="breakfast-product" alt="latte" />
-            <p>Café Café con leche</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/7.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div>
-          <div className="breakfast-item">
-            <img src={juice} className="breakfast-product" alt="juice" />
-            <p>Jugo de frutas</p>
-            <p>natural</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/10.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div>
-          <div className="breakfast-item">
-            <img src={sandwich} className="breakfast-product" alt="sandwich" />
-            <p>Sandwich de</p>
-            <p>jamón y queso</p>
-            <div>
-              <img src={iconLess} className="icons-more-less" alt="icon_less" />
-              S/7.00
-              <img src={iconMore} className="icons-more-less" alt="icon_more" />
-            </div>
-          </div> */}
+          
+          <Item />
         </div>
+
         <div className="breakfast-ticket-btn">
           <div className="breakfast-ticket">
             <div className="item-client">
