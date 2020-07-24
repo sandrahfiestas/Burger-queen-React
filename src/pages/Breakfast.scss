@@ -19,10 +19,6 @@ nav {
   padding: 3px 15px;
 }
 
-.nav-toolbar div:hover {
-  background: rgba(250, 250, 250, 0.3);
-}
-
 .nav-order {
   flex-grow: 1;
   flex-shrink: 1;
@@ -121,18 +117,6 @@ nav {
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: 1fr 1fr;
 }
-
-// .breakfast-item {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     align-items: center;
-// }
-
-// .breakfast-product{
-//     width: 45%;
-//     height: 40%;
-// }
 
 .breakfast-ticket {
     width: 100%;
