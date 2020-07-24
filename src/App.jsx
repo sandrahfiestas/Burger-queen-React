@@ -1,17 +1,12 @@
-// import React, { useState, Component } from 'react';
 import React from 'react';
 import './App.css';
-// import './App.css';
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  // Link
 } from 'react-router-dom';
 import Home from './pages/Home';
 import Breakfast from './pages/Breakfast';
-// import LunchDinner from './page/lunch_dinner/Lunch-dinner';
 import Kitchen from './pages/Kitchen';
 
 function App() {
@@ -25,6 +20,10 @@ function App() {
 
         <Route path="/breakfast">
           <Breakfast />
+        </Route>
+
+        <Route path="/order">
+          <Order />
         </Route>
 
         <Route path="/kitchen">
