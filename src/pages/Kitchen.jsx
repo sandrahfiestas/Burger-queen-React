@@ -1,5 +1,5 @@
 import React from 'react';
-import './Kitchen.scss';
+// import './Kitchen.scss';
 
 function Kitchen() {
   return (
@@ -14,4 +14,3 @@ function Kitchen() {
 }
 
 export default Kitchen;
-

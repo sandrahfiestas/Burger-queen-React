@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import firebase from '../firebase/firebase';
-import './Item.scss';
+import './styleComponents/Item.scss';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
 

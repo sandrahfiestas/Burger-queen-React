@@ -22,10 +22,6 @@ function App() {
           <Breakfast />
         </Route>
 
-        <Route path="/order">
-          <Order />
-        </Route>
-
         <Route path="/kitchen">
           <Kitchen />
         </Route>
