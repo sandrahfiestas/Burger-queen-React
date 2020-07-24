@@ -19,10 +19,6 @@ nav {
   padding: 3px 15px;
 }
 
-.nav-toolbar div:hover {
-  background: rgba(250, 250, 250, 0.3);
-}
-
 .nav-order {
   flex-grow: 1;
   flex-shrink: 1;
@@ -51,7 +47,7 @@ nav {
 }
 
 .logo {
-  width: 24%; 
+  width: 24%;
   margin-top: 5px;
 }
 
@@ -122,18 +118,6 @@ nav {
     grid-template-rows: 1fr 1fr;
 }
 
-.breakfast-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.breakfast-product{
-    width: 45%;
-    height: 40%;
-}
-
 .breakfast-ticket {
     width: 100%;
     height: 40%;
@@ -149,6 +133,10 @@ nav {
     grid-row: 1;
     align-self: center;
     margin-left: 10px;
+}
+
+.validity:invalid {
+  border-bottom-color: red;
 }
 
 .item-time {
@@ -186,9 +174,9 @@ nav {
 }
 
 .breakfast-btns {
-display: flex;
-justify-content: space-around;
-margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .btn-accept {

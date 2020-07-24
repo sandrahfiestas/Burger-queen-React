@@ -1,19 +1,17 @@
-import React, { useState, Component } from 'react';
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from 'react-router-dom';
-import Home from './components/home/Home';
-import Breakfast from './components/breakfast/Breakfast';
-import Kitchen from './components/kitchen/Kitchen';
+// import Home from './pages/home/Home';
+import Home from './pages/Home';
+import Breakfast from './pages/Breakfast';
+import Order from './pages/Order';
+import Kitchen from './pages/Kitchen';
 
 function App() {
-
-
-  
-
   return (
     <Router>
       <Switch>
@@ -26,8 +24,11 @@ function App() {
           <Breakfast />
         </Route>
 
-        <Route path="/kitchen">
+        <Route path="/order">
+          <Order />
+        </Route>
 
+        <Route path="/kitchen">
           <Kitchen />
         </Route>
 
