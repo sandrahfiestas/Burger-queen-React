@@ -3,6 +3,7 @@ import firebase from '../firebase/firebase';
 import './Item.scss';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
+// import latte from '../images/latte.jpg';
 
 function Item() {
   // useState
@@ -25,13 +26,13 @@ function Item() {
     <>
       {product.map((r) => (
         <div className="breakfast-item" key={r.id}>
-          <figure><img className="breakfast-product" src={r.Link} alt="imagen" /></figure>
+          <figure><img className="breakfast-product" src="https://source.unsplash.com/_1x_x8Vtg2w/800x600" alt="imagen" /></figure>
           {r.Product}
           <br />
           {r.Price}
 
           <div>
-            <button onClick={() => setCount(count - 1)}>
+            <button onClick={() => setCount(count > 0 ? count - 1 : count)}>
               <img src={iconLess} className="icons-more-less" alt="icon_less" />
             </button>
 
