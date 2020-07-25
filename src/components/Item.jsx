@@ -3,7 +3,6 @@ import firebase from '../firebase/firebase';
 import './Item.scss';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
-// import latte from '../images/latte.jpg';
 
 function Item() {
   // useState
