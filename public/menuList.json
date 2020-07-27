@@ -1,0 +1,33 @@
+[
+    {
+      "id" : "b-1",
+      "name" : "Café americano",
+      "price" : 5,
+      "category": "Breakfast",
+      "image" : "coffee.jpg"
+    },
+
+    {
+      "id" : "b-2",
+      "name" : "Café con leche",
+      "price" : 7,
+      "category": "Breakfast",
+      "image" : "latte.jpg"
+    },
+
+    {
+      "id" : "b-3",
+      "name" : "Sandwich de jamón y queso",
+      "price" : 10,
+      "category": "Breakfast",
+      "image" : "sandwich.jpg"
+    },
+
+    {
+      "id" : "b-4",
+      "name" : "Jugo de fruta natural",
+      "price" : 7,
+      "category": "Breakfast",
+      "image" : "juice.jpg"
+    }
+  ]
