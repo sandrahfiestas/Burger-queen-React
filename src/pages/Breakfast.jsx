@@ -3,12 +3,6 @@ import './Breakfast.scss';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
 import Item from '../components/Item';
-// import coffee from '../../images/coffee.jpg';
-// import latte from '../../images/latte.jpg';
-// import juice from '../../images/juice.jpg';
-// import sandwich from '../../images/sandwich.jpg';
-// import iconMore from '../../images/icon_more.png';
-// import iconLess from '../../images/icon_less.png';
 
 function Breakfast() {
   return (
