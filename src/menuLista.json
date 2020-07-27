@@ -1,0 +1,120 @@
+{
+    "Breakfast": [
+      {
+        "id" : "b-1",
+        "name" : "Café americano",
+        "price" : 5,
+        "category": "Breakfast",
+        "image" : "./images/coffee.jpg"
+      },
+
+      {
+        "id" : "b-2",
+        "name" : "Café con leche",
+        "price" : 7,
+        "category": "Breakfast",
+        "image" : "./images/latte.jpg"
+      },
+
+      {
+        "id" : "b-3",
+        "name" : "Sandwich de jamón y queso",
+        "price" : 10,
+        "category": "Breakfast",
+        "image" : "./images/sandwich.jpg"
+      },
+
+      {
+        "id" : "b-4",
+        "name" : "Jugo de fruta natural",
+        "price" : 7,
+        "category": "Breakfast",
+        "image" : "./images/juice.jpg"
+      }
+    ],
+  
+    "Lunch": [
+      {
+        "id" : "l-1",
+        "name": "Hamburguesa simple",
+        "price" : 10,
+        "category": "Hamburguesas",
+        "type" : ["Res", "Pollo", "Vegetariana"],
+        "image" : ""
+      },
+      
+      {
+        "id" : "l-2",
+        "name": "Hamburguesa doble",
+        "price" : 15,
+        "category": "Hamburguesas",
+        "type" : ["Res", "Pollo", "Vegetariana"],
+        "image" : ""
+      },
+
+      {
+        "id" : "l-3",
+        "name": "Papas fritas",
+        "price" : 5,
+        "category": "Acompañamientos",
+        "image" : ""
+      },
+
+      {
+        "id" : "l-4",
+        "name": "Aros de cebolla",
+        "price" : 5,
+        "category": "Acompañamientos",
+        "image" : ""
+      },
+
+      {
+        "id" : "l-5",
+        "name": "Agua 500ml",
+        "price" : 5,
+        "category": "Bebidas",
+        "image" : ""
+      },    
+
+      {
+        "id" : "l-6",
+        "name": "Agua 750ml",
+        "price" : 7,
+        "category": "Bebidas",
+        "image" : ""
+      },
+
+      {
+        "id" : "l-7",
+        "name": "Gaseosa 500ml",
+        "price" : 7,
+        "category": "Bebidas",
+        "image" : ""
+      },
+
+      {
+        "id" : "l-8",
+        "name": "Gaseosa 750ml",
+        "price" : 10,
+        "category": "Bebidas",
+        "image" : ""
+      },
+
+      {
+        "id" : "l-9",
+        "name": "Queso",
+        "price" : 1,
+        "category": "Adicional",
+        "image": ""
+      },
+
+      {
+        "id" : "l-10",
+        "name": "Huevo",
+        "price" : 1,
+        "category": "Adicional",
+        "image": ""
+      }
+    ]
+  
+}
