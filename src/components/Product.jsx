@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import MenuOrder from '../components/MenuOrder';
 import './styleComponents/Product.scss';
+// import Summary from './Summary';
 
 function Product() {
   // useState
@@ -24,7 +25,7 @@ function Product() {
   const addProducto = (item) => {
     const idProduct = item.id;
     const nameProduct = item.name;
-    const priceProduct = item.price;
+    const priceProduct = parseInt(item.price);
     const countProduct = item.count;
 
     summary.push({
@@ -34,7 +35,7 @@ function Product() {
       ...summary,
     ]);
 
-    console.log(summary);
+    // console.log(summary);
   };
 
   return (
@@ -48,12 +49,23 @@ function Product() {
             {Menu.price}
             {Menu.count}
           </p>
-          <button onClick= {() => addProducto(Menu)} value={Menu.price} name={Menu.name}
-                id= {Menu.id}
-                type = "button" className="btn-add" key={i}>AGREGAR</button>
+          <button
+            onClick={() => addProducto(Menu)}
+            value={Menu.price}
+            name={Menu.name}
+            id={Menu.id}
+            type="button"
+            className="btn-add"
+            key={i}
+          >
+            AGREGAR
+          </button>
         </div>
       ))}
     </>
+    <div>
+        <Summary  summary={summary} limpiarPedido={limpiarPedido} />
+    </div>    
   );
 }
 export default Product;

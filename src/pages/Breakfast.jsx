@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Breakfast.scss';
+import Product from '../components/Product';
+import Summary from '../components/Summary';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
-import Item from '../components/Item';
-// import coffee from '../../images/coffee.jpg';
-// import latte from '../../images/latte.jpg';
-// import juice from '../../images/juice.jpg';
-// import sandwich from '../../images/sandwich.jpg';
-// import iconMore from '../../images/icon_more.png';
-// import iconLess from '../../images/icon_less.png';
 
 function Breakfast() {
+  const [clock, setClock] = useState(new Date().toLocaleString([], { hour: '2-digit', hour12: true, minute: '2-digit' }));
+  useEffect(() => {
+    // setInterval -> ejetuta una función en intervalos
+    const interval = setInterval(() => {
+      // toLocaleString([locale [, options]]);
+      setClock(new Date().toLocaleString([], { hour: '2-digit', hour12: true, minute: '2-digit' }));
+    }, 1000);
+    // clearInterval -> borra intervalos
+    return () => clearInterval(interval);
+  }, []);
+
   return (
 
     <div>
@@ -41,41 +47,12 @@ function Breakfast() {
 
       <div className="container-breakfast">
         <div className="breakfast-menu">
-          
-          <Item />
+          <Product />
         </div>
 
         <div className="breakfast-ticket-btn">
           <div className="breakfast-ticket">
-            <div className="item-client">
-              <p>
-                Ciente :
-                <input type="text" placeholder="Nombre de cliente" className="validaty" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+" />
-              </p>
-            </div>
-            <div className="item-time">
-              <p>Hora de atención:</p>
-              <p>Número de Mesa:</p>
-            </div>
-            <div className="item-product">
-              <p>PRODUCTO</p>
-            </div>
-            <div className="item-unit">
-              <p>UNID.</p>
-            </div>
-            <div className="item-price">
-              <p>PRECIO</p>
-            </div>
-            <div className="item-total">
-              <p>TOTAL DE PEDIDO</p>
-            </div>
-            <div className="item-total-price">
-              <p>S/.</p>
-            </div>
-          </div>
-          <div className="breakfast-btns">
-            <button className="btn-accept">CONFIRMAR</button>
-            <button className="btn-cancel">CANCELAR</button>
+           {/* <Summary /> */}
           </div>
         </div>
       </div>
