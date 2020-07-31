@@ -8,7 +8,6 @@ import iconDelete from '../images/icon_delete.png';
 const Summary = (props) => {
   const [name, setName] = React.useState('');
   const [table, setTable] = React.useState('');
-  // Devuelve un valor con estado y la funcion para actualizarlo
   const [, setResult] = React.useState(props.summary);
 
   const nameClient = (e) => {
@@ -19,7 +18,7 @@ const Summary = (props) => {
     setTable(e.target.value);
   };
 
-  const increase = (item) => {
+  const btnMore = (item) => {
     const array = props.summary;
     const itemSelected = array.find((element) => element.idProduct === item.idProduct);
 
@@ -27,8 +26,7 @@ const Summary = (props) => {
     setResult({ ...array, countProduct: itemSelected.countProduct });
   };
 
-  // Metodo find, devuelve el valor del primer elemento del array que cumple la función dada
-  const decrease = (item) => {
+  const btnLess = (item) => {
     const array = props.summary;
     const itemSelected = array.find((element) => element.idProduct === item.idProduct);
 
@@ -80,8 +78,8 @@ const Summary = (props) => {
             {
               props.summary.map((item, i) => (
                 <tr key={i} id={item.idProduct}>
-                  <th scope="col"><img src={iconMore} onClick={(e) => increase(item)} alt="" /></th>
-                  <th scope="col"><img src={iconLess} onClick={(e) => decrease(item)} alt="" /></th>
+                  <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
+                  <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
                   <th scope="col"><p className="">{item.countProduct}</p></th>
                   <th scope="col">{item.nameProduct}</th>
                   <th scope="col">
@@ -92,7 +90,7 @@ const Summary = (props) => {
                     S/
                     {item.priceProduct * item.countProduct}
                   </th>
-                  <th scope="col"><img src={iconDelete} id={i} onlclick={deleteItem} alt="" /></th>
+                  <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
                 </tr>
               ))
              }
@@ -100,7 +98,7 @@ const Summary = (props) => {
               <th colSpan={7}>
                 <p>
                   Total: S/
-                  {props.summary.reduce((acc, item) => acc + item.priceProduct * item.countProduct, 0)}
+                  {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
                 </p>
               </th>
             </tr>

@@ -1,4 +1,5 @@
-[
+{
+  "Breakfast": [
   {
     "id": "b1",
     "name": "Café americano",
@@ -32,3 +33,5 @@
     "image": "juice.jpg"
   }
 ]
+
+}

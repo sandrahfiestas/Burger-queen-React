@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './Breakfast.scss';
 import Product from '../components/Product';
-import Summary from '../components/Summary';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
 
 function Breakfast() {
+
   const [clock, setClock] = useState(new Date().toLocaleString([], { hour: '2-digit', hour12: true, minute: '2-digit' }));
   useEffect(() => {
     // setInterval -> ejetuta una función en intervalos
@@ -46,15 +46,7 @@ function Breakfast() {
       </div>
 
       <div className="container-breakfast">
-        <div className="breakfast-menu">
-          <Product />
-        </div>
-
-        <div className="breakfast-ticket-btn">
-          <div className="breakfast-ticket">
-           {/* <Summary /> */}
-          </div>
-        </div>
+        <Product />
       </div>
     </div>
   );
