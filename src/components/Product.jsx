@@ -24,7 +24,7 @@ function Product() {
   const addProducto = (item) => {
     const idProduct = item.id;
     const nameProduct = item.name;
-    const priceProduct = parseInt(item.price);
+    const priceProduct = parseInt(item.price, 10);
     const countProduct = item.count;
 
     const findProduct = summary.find((s) => s.idProduct === idProduct);
@@ -45,7 +45,7 @@ function Product() {
   return (
     <>
       <div className="breakfast-menu">
-        {menu.map((Menu, i) => (
+        {menu.map((Menu) => (
           <div className="breakfast-item" key={Menu.id}>
             <figure><img className="breakfast-product" src={`${process.env.PUBLIC_URL}/imagesProduct/${Menu.image}`} alt="imagen" /></figure>
             {Menu.name}
@@ -60,18 +60,18 @@ function Product() {
               id={Menu.id}
               type="button"
               className="btn-add"
-              key={i}
+              key={Menu.id}
             >
               AGREGAR
             </button>
           </div>
         ))}
       </div>
-      <div className="breakfast-ticket-btn">
-        <div className="breakfast-ticket">
-          <Summary summary={summary} />
-        </div>
-      </div>
+
+      <>
+        <Summary summary={summary} />
+      </>
+
     </>
   );
 }

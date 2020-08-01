@@ -4,11 +4,9 @@ import React from 'react';
 function Kitchen() {
   return (
     <div className="kitchen">
-
       <div className="container">
         <p>Cocinando</p>
       </div>
-
     </div>
   );
 }

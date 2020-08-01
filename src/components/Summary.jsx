@@ -43,74 +43,81 @@ const Summary = (props) => {
   };
 
   return (
+    <div className="">
+      <div className="breakfast-ticket">
 
-    <div className="ticket-header">
-      <div className="ticket-client">
-        <p>
-          Ciente :
-          <input type="text" onChange={nameClient} placeholder="Nombre de cliente" value={name} className="validaty input-client" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+" />
-        </p>
-      </div>
-      <div className="ticket-time">
-        <p>
-          Hora de atención:
-          {/* {clock} */}
-        </p>
-        <p>
-          Número de Mesa :
-          <input type="text" onChange={numberTable} placeholder="N° mesa" value={table} className="validaty input-table" pattern="" />
-        </p>
-      </div>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col" />
-              <th scope="col" />
-              <th scope="col">Cant.</th>
-              <th scope="col">Producto</th>
-              <th scope="col">P/U</th>
-              <th scope="col">Total</th>
-              <th scope="col">Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              props.summary.map((item, i) => (
-                <tr key={i} id={item.idProduct}>
-                  <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
-                  <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
-                  <th scope="col"><p className="">{item.countProduct}</p></th>
-                  <th scope="col">{item.nameProduct}</th>
-                  <th scope="col">
-                    S/
-                    {item.priceProduct}
+        <div className="ticket-header">
+          <div className="">
+            <p>
+              Ciente :
+              <input type="text" onChange={nameClient} placeholder="Nombre de cliente" value={name} className="validaty input-client" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+" />
+            </p>
+          </div>
+          <div className="">
+            <p>
+              Hora de atención:
+              {/* {clock} */}
+            </p>
+            <p>
+              Número de Mesa :
+              <input type="text" onChange={numberTable} placeholder="N° mesa" value={table} className="validaty input-table" pattern="" />
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" />
+                <th scope="col" />
+                <th scope="col">Cant.</th>
+                <th scope="col">Producto</th>
+                <th scope="col">P/U</th>
+                <th scope="col">Total</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                props.summary.map((item, i) => (
+                  <tr key={i} id={item.idProduct}>
+                    <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
+                    <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
+                    <th scope="col"><p className="">{item.countProduct}</p></th>
+                    <th scope="col">{item.nameProduct}</th>
+                    <th scope="col">
+                      S/
+                      {item.priceProduct}
+                    </th>
+                    <th scope="col">
+                      S/
+                      {item.priceProduct * item.countProduct}
+                    </th>
+                    <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
+                  </tr>
+                ))
+              }
+                <tr>
+                  <th colSpan={7}>
+                    <p>
+                      Total: S/
+                      {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
+                    </p>
                   </th>
-                  <th scope="col">
-                    S/
-                    {item.priceProduct * item.countProduct}
-                  </th>
-                  <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
                 </tr>
-              ))
-             }
-            <tr>
-              <th colSpan={7}>
-                <p>
-                  Total: S/
-                  {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
-                </p>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+              </tbody>
+            </table>
+        </div>
+
       </div>
+
       <div className="breakfast-btns">
         <button className="btn-accept">CONFIRMAR</button>
         <button className="btn-cancel">CANCELAR</button>
       </div>
-    </div>
 
+    </div>
   );
 };
 
