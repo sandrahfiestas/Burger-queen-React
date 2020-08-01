@@ -1,10 +1,9 @@
 import React from 'react';
 import './Breakfast.scss';
+import Product from '../components/Product';
+import Clock from '../components/Clock';
 import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
-import Product from '../components/Product';
-import Ticket from '../components/Ticket';
-import Clock from '../components/Clock';
 
 function Breakfast() {
   return (
@@ -34,10 +33,7 @@ function Breakfast() {
       </div>
 
       <div className="container-breakfast">
-        <div className="breakfast-menu">
-          <Product />
-        </div>
-        <Ticket />
+        <Product />
       </div>
     </div>
   );
