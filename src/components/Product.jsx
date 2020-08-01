@@ -17,7 +17,7 @@ function Product() {
     fetch('../menuList.json')
       .then((response) => response.json())
       .then((datos) => {
-        setMenu(datos.Breakfast);
+        setMenu(datos.Menu);
       });
   }, []);
 
