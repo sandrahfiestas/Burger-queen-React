@@ -5,10 +5,8 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
-// import Home from './pages/home/Home';
 import Home from './pages/Home';
 import Breakfast from './pages/Breakfast';
-import Order from './pages/Order';
 import Kitchen from './pages/Kitchen';
 
 function App() {
@@ -22,10 +20,6 @@ function App() {
 
         <Route path="/breakfast">
           <Breakfast />
-        </Route>
-
-        <Route path="/order">
-          <Order />
         </Route>
 
         <Route path="/kitchen">
