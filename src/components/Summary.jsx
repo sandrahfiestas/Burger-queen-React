@@ -98,21 +98,21 @@ const Summary = (props) => {
                   </tr>
                 ))
               }
-                <tr>
-                  <th colSpan={7}>
-                    <p>
-                      Total: S/
-                      {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
-                    </p>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
+              <tr>
+                <th colSpan={7}>
+                  <p>
+                    Total: S/
+                    {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
+                  </p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
       </div>
 
-      <div className="breakfast-btns">
+      <div className="menu-btns-active">
         <button className="btn-accept">CONFIRMAR</button>
         <button className="btn-cancel">CANCELAR</button>
       </div>

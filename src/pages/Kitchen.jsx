@@ -1,12 +1,13 @@
 import React from 'react';
-// import './Kitchen.scss';
+import './Kitchen.scss';
+import NavBarChef from '../components/NavBarChef';
+import OrdersChef from '../components/OrdersChef';
 
 function Kitchen() {
   return (
-    <div className="kitchen">
-      <div className="container">
-        <p>Cocinando</p>
-      </div>
+    <div>
+      <NavBarChef />
+      <OrdersChef />
     </div>
   );
 }
