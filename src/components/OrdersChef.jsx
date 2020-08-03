@@ -25,7 +25,7 @@ function OrdersChef() {
               <p className="text hour-order-end">
                 Hora de termino:
               </p>
-              <div className="orders footer">
+              <div className="order-ok">
                 <button className="btn-order-ok">Listo</button>
               </div>
             </div>

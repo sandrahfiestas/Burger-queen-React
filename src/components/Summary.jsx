@@ -1,5 +1,5 @@
 import React from 'react';
-// import firebase from '../firebase/firebase';
+import firebase from '../firebase/firebase';
 import './styleComponents/Summary.scss';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
@@ -42,6 +42,24 @@ const Summary = (props) => {
     setResult(...array);
   };
 
+  // Enviando el pedido a Firebase
+  const addOrder = async (e) => {
+    try {
+      const newOrder = {
+        order: props.summary,
+        client: name,
+        numMesa: table,
+        status: 'pending',
+        hourSend: new Date().getTime(),
+      };
+      firebase.firestore().collection('pedidoss').add(newOrder);
+      setName('');
+      setTable('');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="">
       <div className="breakfast-ticket">
@@ -80,24 +98,24 @@ const Summary = (props) => {
             </thead>
             <tbody>
               {
-                props.summary.map((item, i) => (
-                  <tr key={i} id={item.idProduct}>
-                    <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
-                    <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
-                    <th scope="col"><p className="">{item.countProduct}</p></th>
-                    <th scope="col">{item.nameProduct}</th>
-                    <th scope="col">
-                      S/
-                      {item.priceProduct}
-                    </th>
-                    <th scope="col">
-                      S/
-                      {item.priceProduct * item.countProduct}
-                    </th>
-                    <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
-                  </tr>
-                ))
-              }
+                  props.summary.map((item, i) => (
+                    <tr key={i} id={item.idProduct}>
+                      <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
+                      <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
+                      <th scope="col"><p className="">{item.countProduct}</p></th>
+                      <th scope="col">{item.nameProduct}</th>
+                      <th scope="col">
+                        S/
+                        {item.priceProduct}
+                      </th>
+                      <th scope="col">
+                        S/
+                        {item.priceProduct * item.countProduct}
+                      </th>
+                      <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
+                    </tr>
+                  ))
+                }
               <tr>
                 <th colSpan={7}>
                   <p>
@@ -113,7 +131,7 @@ const Summary = (props) => {
       </div>
 
       <div className="menu-btns-active">
-        <button className="btn-accept">CONFIRMAR</button>
+        <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
         <button className="btn-cancel">CANCELAR</button>
       </div>
 
