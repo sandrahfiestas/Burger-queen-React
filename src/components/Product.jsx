@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './styleComponents/Product.scss';
 import Summary from './Summary';
 
-// import info from '../../public/menuList.json';
-
 function Product() {
   // useState
   // Al renderizar genera un estado (menu)
