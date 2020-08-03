@@ -2,11 +2,16 @@ import React, { useState, useEffect } from 'react';
 import './styleComponents/Product.scss';
 import Summary from './Summary';
 
+// import info from '../../public/menuList.json';
+
 function Product() {
   // useState
   // Al renderizar genera un estado (menu)
   // La función (setMenu) actualiza el estado del componente...
   // aceptando un nuevo valor de estado.
+
+  // const data = info.Menu;
+  // const [type, setType] = useState('breakfast');
 
   const [menu, setMenu] = useState([0]);
   const [summary, setSummary] = useState([]);

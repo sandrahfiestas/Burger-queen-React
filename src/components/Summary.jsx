@@ -1,6 +1,7 @@
 import React from 'react';
 // import firebase from '../firebase/firebase';
 import './styleComponents/Summary.scss';
+import { dataBase } from 'firebase';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
 import iconDelete from '../images/icon_delete.png';
@@ -40,6 +41,25 @@ const Summary = (props) => {
     const position = e.target.id;
     const array = props.summary.splice(position, 1);
     setResult(...array);
+  };
+
+  // Enviar pedido a firebase
+  const confirmOrder = async (e) => {
+    try {
+      const newOrder = {
+        order: props.summary,
+        client: name,
+        numberTable: table,
+        status: 'pending',
+        hourSend: new Date().getTime(),
+      };
+
+      await dataBase.collection('pedidoss').add(newOrder);
+      // setName('');
+      // setTable('');
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -98,22 +118,22 @@ const Summary = (props) => {
                   </tr>
                 ))
               }
-                <tr>
-                  <th colSpan={7}>
-                    <p>
-                      Total: S/
-                      {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
-                    </p>
-                  </th>
-                </tr>
-              </tbody>
-            </table>
+              <tr>
+                <th colSpan={7}>
+                  <p>
+                    Total: S/
+                    {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
+                  </p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
       </div>
 
       <div className="breakfast-btns">
-        <button className="btn-accept">CONFIRMAR</button>
+        <button className="btn-accept" type="submit" onClick={confirmOrder}>CONFIRMAR</button>
         <button className="btn-cancel">CANCELAR</button>
       </div>
 

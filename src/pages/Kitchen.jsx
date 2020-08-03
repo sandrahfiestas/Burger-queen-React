@@ -6,6 +6,7 @@ function Kitchen() {
     <div className="kitchen">
       <div className="container">
         <p>Cocinando</p>
+        {/* < Order /> */}
       </div>
     </div>
   );

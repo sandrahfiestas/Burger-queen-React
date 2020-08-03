@@ -6,6 +6,7 @@ import logo from '../images/logo.png';
 import menuBurger from '../images/menu_burger.png';
 
 function Breakfast() {
+  // const [type, setType] = useState('breakfast');
   return (
 
     <div>
@@ -30,6 +31,8 @@ function Breakfast() {
       <div className="order-btns">
         <button className="breakfast-btns-menu">DESAYUNO</button>
         <button className="breakfast-btns-menu">ALMUERZO/CENA</button>
+        {/* <button className="breakfast-btns-menu" onClick={() => setType('breakfast')}>DESAYUNO</button>
+        <button className="breakfast-btns-menu" onClick={() => setType('lunch')}>ALMUERZO/CENA</button> */}
       </div>
 
       <div className="container-breakfast">
