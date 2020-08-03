@@ -93,12 +93,12 @@ nav {
   margin-top: 25px;
   outline: none;
   cursor: pointer;
-}
 
-.breakfast-btns-menu:hover {
-  background-color: #3B1C14;
-  color: #ffffff;
-  border: 3px solid #ffffff;
+  &:hover {
+    background-color: #3B1C14;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+  }
 }
 
 .container-breakfast {
