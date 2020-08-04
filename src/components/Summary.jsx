@@ -5,7 +5,7 @@ import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
 import iconDelete from '../images/icon_delete.png';
 
-const Summary = (props) => {
+function Summary(props) {
   const [name, setName] = React.useState('');
   const [table, setTable] = React.useState('');
   const [, setResult] = React.useState(props.summary);
@@ -48,11 +48,11 @@ const Summary = (props) => {
       const newOrder = {
         order: props.summary,
         client: name,
-        numMesa: table,
+        numberTable: table,
         status: 'pending',
         hourSend: new Date().getTime(),
       };
-      firebase.firestore().collection('pedidoss').add(newOrder);
+      await firebase.firestore().collection('pedidoss').add(newOrder);
       setName('');
       setTable('');
     } catch (error) {
@@ -137,6 +137,6 @@ const Summary = (props) => {
 
     </div>
   );
-};
+}
 
 export default Summary;

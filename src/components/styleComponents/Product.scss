@@ -27,3 +27,42 @@
     color: #ffffff;
     border: 2px solid #ffffff;
   }
+
+  .sub-order-btns {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .sub-order-btns > div {
+    margin: 6px;
+    text-align: center;
+    // line-height: 75px;
+    // font-size: 30px;
+  }
+
+  .btns-bonus {
+    padding: 5px;
+    width: 190px;
+    height: 45px;
+    left: 600px;
+    top: 150px;
+    background: #f2c87b;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 22px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .btns-bonus:hover {
+    background-color: #3B1C14;
+    color: #ffffff;
+    border: 3px solid #ffffff;
+  }
