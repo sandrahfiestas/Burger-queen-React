@@ -3,7 +3,6 @@ import './styleComponents/Product.scss';
 import Summary from './Summary';
 
 function Product() {
-
   const [data, setData] = useState([0]);
   const [summary, setSummary] = useState([]);
   const [type, setType] = useState('breakfast');

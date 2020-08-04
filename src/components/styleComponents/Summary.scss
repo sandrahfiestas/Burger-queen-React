@@ -43,11 +43,11 @@
     text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
     outline: none;
     cursor: pointer;
-}
 
-.btn-accept:hover {
-    background-color: #0b3f28;
-    opacity: 0.9;
+    &:hover {
+      background-color: #0b3f28;
+      opacity: 0.9;
+    }
 }
 
 .btn-cancel {
@@ -62,9 +62,13 @@
     text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
     outline: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: #720b08;
+      opacity: 0.9;
+    }
 }
 
-.btn-cancel:hover {
-    background-color: #720b08;
-    opacity: 0.9;
+.scroll {
+	overflow: auto;
 }

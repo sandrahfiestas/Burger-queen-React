@@ -19,8 +19,13 @@
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     outline: none;
     cursor: pointer;
+    
+    &:hover {
+        background-color: #6e3729;;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
 }
-
 
 .btn-add:hover {
     background-color: #6e3729;;
