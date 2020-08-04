@@ -1,5 +1,6 @@
 import React from 'react';
 import './styleComponents/OrdersChef.scss';
+// import firebase from '../firebase/firebase';
 
 function OrdersChef() {
   return (

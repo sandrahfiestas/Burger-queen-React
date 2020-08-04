@@ -3,16 +3,11 @@ import './styleComponents/Product.scss';
 import Summary from './Summary';
 
 function Product() {
-  // useState
-  // Al renderizar genera un estado (menu)
-  // La función (setMenu) actualiza el estado del componente...
-  // aceptando un nuevo valor de estado.
-
   const [data, setData] = useState([0]);
   const [summary, setSummary] = useState([]);
   const [type, setType] = useState('breakfast');
+  const [subType, setSubType] = useState('');
 
-  // useEffect
   // Lee los datos alojados en menuList.json
   useEffect(() => {
     fetch('../menuList.json')
@@ -21,6 +16,11 @@ function Product() {
         setData(datos.Menu);
       });
   }, []);
+
+  const selecType = (type, subType) => {
+    setType(type);
+    setSubType(subType);
+  };
 
   const addProducto = (item) => {
     const idProduct = item.id;
@@ -46,12 +46,32 @@ function Product() {
   return (
     <>
       <div className="order-btns">
-        <button className="btns-menu" onClick={() => setType('breakfast')}>DESAYUNO</button>
-        <button className="btns-menu" onClick={() => setType('lunch')}>ALMUERZO/CENA</button>
+        <button className="btns-menu" onClick={() => selecType('breakfast', '')}>DESAYUNO</button>
+        <button className="btns-menu" onClick={() => selecType('lunch', 'burger')}>ALMUERZO/CENA</button>
+
+        {type === 'lunch'
+          ? (
+            <div className="sub-order-btns ">
+              <div>
+                <button className="btns-bonus" onClick={() => selecType('lunch', 'burger')}>HAMBURGUESAS</button>
+              </div>
+              <div>
+                <button className="btns-bonus" onClick={() => selecType('lunch', 'accompaniments')}>ACOMPAÑAMIENTOS</button>
+              </div>
+              <div>
+                <button className="btns-bonus" onClick={() => selecType('lunch', 'drinks')}>BEBIDAS</button>
+              </div>
+              <div>
+                <button className="btns-bonus" onClick={() => selecType('lunch', 'additional')}>ADICIONALES</button>
+              </div>
+            </div>
+          )
+          : ''}
+
       </div>
       <div className="container-menu">
         <div className="breakfast-menu">
-          {data.filter((item) => item.type === type).map((item) => (
+          {data.filter((item) => item.type === type && item.subType === subType).map((item) => (
             <div className="breakfast-item" key={item.id}>
               <figure><img className="breakfast-product" src={`${process.env.PUBLIC_URL}/imagesProduct/${item.image}`} alt="imagen" /></figure>
               {item.name}

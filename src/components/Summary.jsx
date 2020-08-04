@@ -6,51 +6,7 @@ import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
 import iconDelete from '../images/icon_delete.png';
 
-const Summary = (props) => {
-
-  // const initialStateValues = {
-  //   table: '',
-  //   name: '',
-  //   state: 'Por preparar',
-  // };
-
-  // const [, setResult] = React.useState(props.summary);
-  // const [values, setValues] = React.useState(initialStateValues);
-
-  // // Manejando cambio de entrada
-  // const handleInputChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setValues({ ...values, [name]: value });
-  // };
-
-  // const handleSubmit = (e) => {
-  //   // cancelando su comportamiento por defecto
-  //   e.preventDefault();
-  //   if (!values.name.trim() || !values.table.trim()) {
-  //     console.log('Campo(s) vacio(s). Verifique');
-  //   // return;
-  //   } else {
-  //     firebase.firestore().collection('pedidos').add({
-  //       name: values.name,
-  //       table: values.table,
-  //     })
-  //       .then(() => {
-  //         console.log('Pedido guardado');
-  //       })
-  //       .catch((error) => {
-  //         console.log('Error al guardar peido:', error);
-  //       });
-
-  //     console.log(values);
-  //     setValues({ ...initialStateValues });
-  //   }
-  // };
-
-  // const cancelOrder = (e) => {
-  //   e.preventDefault();
-  //   setValues({ ...initialStateValues });
-  // };
-
+function Summary(props) {
   const [name, setName] = React.useState('');
   const [table, setTable] = React.useState('');
   const [, setResult] = React.useState(props.summary);
@@ -189,7 +145,6 @@ const Summary = (props) => {
       </div>
 
     </div>
-
     <div className="menu-btns-active">
       <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
       <button className="btn-cancel" onClick={bntCancel}>CANCELAR</button>
