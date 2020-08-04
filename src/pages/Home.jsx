@@ -12,7 +12,7 @@ function Home() {
         <img src={logo} className="logo-queen" alt="logo" />
       </div>
       <div className="home-btns">
-        <Link to="/breakfast">
+        <Link to="/menu">
           <button className="button">
             <img src={iconMenu} className="icon-home" alt="icon_menu" />
             MENÚ

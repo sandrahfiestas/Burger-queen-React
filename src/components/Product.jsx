@@ -8,8 +8,9 @@ function Product() {
   // La función (setMenu) actualiza el estado del componente...
   // aceptando un nuevo valor de estado.
 
-  const [menu, setMenu] = useState([0]);
+  const [data, setData] = useState([0]);
   const [summary, setSummary] = useState([]);
+  const [type, setType] = useState('breakfast');
 
   // useEffect
   // Lee los datos alojados en menuList.json
@@ -17,7 +18,7 @@ function Product() {
     fetch('../menuList.json')
       .then((response) => response.json())
       .then((datos) => {
-        setMenu(datos.Breakfast);
+        setData(datos.Menu);
       });
   }, []);
 
@@ -44,34 +45,36 @@ function Product() {
 
   return (
     <>
-      <div className="breakfast-menu">
-        {menu.map((Menu) => (
-          <div className="breakfast-item" key={Menu.id}>
-            <figure><img className="breakfast-product" src={`${process.env.PUBLIC_URL}/imagesProduct/${Menu.image}`} alt="imagen" /></figure>
-            {Menu.name}
-            <p>
-              S./
-              {Menu.price}
-            </p>
-            <button
-              onClick={() => addProducto(Menu)}
-              value={Menu.price}
-              name={Menu.name}
-              id={Menu.id}
-              type="button"
-              className="btn-add"
-              key={Menu.id}
-            >
-              AGREGAR
-            </button>
-          </div>
-        ))}
+      <div className="order-btns">
+        <button className="btns-menu" onClick={() => setType('breakfast')}>DESAYUNO</button>
+        <button className="btns-menu" onClick={() => setType('lunch')}>ALMUERZO/CENA</button>
       </div>
-
-      <>
+      <div className="container-menu">
+        <div className="breakfast-menu">
+          {data.filter((item) => item.type === type).map((item) => (
+            <div className="breakfast-item" key={item.id}>
+              <figure><img className="breakfast-product" src={`${process.env.PUBLIC_URL}/imagesProduct/${item.image}`} alt="imagen" /></figure>
+              {item.name}
+              <p>
+                S./
+                {item.price}
+              </p>
+              <button
+                onClick={() => addProducto(item)}
+                value={item.price}
+                name={item.name}
+                id={item.id}
+                type="button"
+                className="btn-add"
+                key={item.id}
+              >
+                AGREGAR
+              </button>
+            </div>
+          ))}
+        </div>
         <Summary summary={summary} />
-      </>
-
+      </div>
     </>
   );
 }

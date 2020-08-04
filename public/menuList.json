@@ -1,5 +1,5 @@
 {
-  "Breakfast": [
+  "Menu": [
   {
     "id": "b1",
     "name": "Café americano",
@@ -31,6 +31,118 @@
     "count": 1,
     "type": "breakfast",
     "image": "juice.jpg"
+  },
+  {
+    "id": "l10",
+    "name": "Hamburguesa simple res",
+    "price": 10,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "l11",
+    "name": "Hamburguesa doble res",
+    "price": 15,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "l12",
+    "name": "Hamburguesa simple pollo",
+    "price": 10,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "l13",
+    "name": "Hamburguesa doble pollo",
+    "price": 15,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "l14",
+    "name": "Hamburguesa simple vegetariana",
+    "price": 10,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "l15",
+    "name": "Hamburguesa doble vegetariana",
+    "price": 15,
+    "count": 1,
+    "type": "lunch",
+    "image": ""
+  },
+  {
+    "id": "c1",
+    "name": "Papas fritas",
+    "price": 5,
+    "count": 1,
+    "type": "accompaniments",
+    "image": ""
+  },
+  {
+    "id": "c2",
+    "name": "Aros de cebolla",
+    "price": 5,
+    "count": 1,
+    "type": "accompaniments",
+    "image": ""
+  },
+  {
+    "id": "d1",
+    "name": "Agua 500ml",
+    "price": 5,
+    "count": 1,
+    "type": "drinks",
+    "image": ""
+  },
+  {
+    "id": "d2",
+    "name": "Agua 750ml",
+    "price": 7,
+    "count": 1,
+    "type": "drinks",
+    "image": ""
+  },
+  {
+    "id": "d3",
+    "name": "Gaseosa 500ml",
+    "price": 7,
+    "count": 1,
+    "type": "drinks",
+    "image": ""
+  },
+  {
+    "id": "d4",
+    "name": "Gaseosa 750ml",
+    "price": 10,
+    "count": 1,
+    "type": "drinks",
+    "image": ""
+  },
+  {
+    "id": "ad1",
+    "name": "Queso",
+    "price": 1,
+    "count": 1,
+    "type": "additional",
+    "image": ""
+  },
+  {
+    "id": "ad2",
+    "name": "Huevo",
+    "price": 1,
+    "count": 1,
+    "type": "additional",
+    "image": ""
   }
 ]
 }
