@@ -115,7 +115,7 @@ const Summary = (props) => {
     const array = props.summary.splice(0, 2);
     setResult(...array);
   };
-
+  
   return (
     <div className="">
     <div className="breakfast-ticket">
