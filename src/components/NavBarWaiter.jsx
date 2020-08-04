@@ -1,16 +1,19 @@
 import React from 'react';
 import './styleComponents/NavBarWaiter.scss';
+import MenuBurger from './MenuBurger';
 import Clock from './Clock';
 import logo from '../images/logo.png';
-import menuBurger from '../images/menu_burger.png';
+// import menuBurger from '../images/menu_burger.png';
 
 function NavBarWaiter() {
   return (
     <>
       <nav className="nav-toolbar">
-        <div className="menu-burger">
+
+        <MenuBurger />
+        {/* <div className="menu-burger">
           <img src={menuBurger} className="menu_burger" alt="menu_burger" />
-        </div>
+        </div> */}
 
         <div className="logo">
           <img src={logo} className="logo" alt="logo" />
