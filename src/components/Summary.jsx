@@ -87,6 +87,14 @@ const Summary = (props) => {
     setResult(...array);
   };
 
+  const initial = () => {
+    setName('');
+    setTable('');
+    const arry = props.summary.length
+    const array = props.summary.splice(0, arry);
+    setResult(...array);
+  };
+
   // Enviando el pedido a Firebase
   const addOrder = async (e) => {
     if (!name.trim() || !table.trim()) {
@@ -101,8 +109,7 @@ const Summary = (props) => {
           hourSend: new Date().getTime(),
         };
         firebase.firestore().collection('pedidos').add(newOrder);
-        setName('');
-        setTable('');
+        initial();
       } catch (error) {
         console.log(error);
       }
@@ -110,15 +117,12 @@ const Summary = (props) => {
   };
 
   const bntCancel = () => {
-    setName('');
-    setTable('');
-    const array = props.summary.splice(0, 2);
-    setResult(...array);
+    initial();
   };
-  
+
   return (
     <div className="">
-    <div className="breakfast-ticket">
+    <div className="breakfast-ticket scroll">
 
       <div className="ticket-header">
         <div className="">
@@ -130,7 +134,7 @@ const Summary = (props) => {
         <div className="">
           <p>
             Hora de atención:
-            {/* {clock} */}
+            <Clock />
           </p>
           <p>
             Número de Mesa :
