@@ -1,18 +1,45 @@
-  .menu-burger {
+ .menu-burger {
     width: 8%;
     display: flex;
     align-items: inherit;
     justify-content: inherit;
   }
+ 
+ .button-burger {
+	 position: absolute;
+	 left: 1.66%;
+	 right: 94.82%;
+	 top: 3%;
+	 bottom: 91.41%;
+	 box-sizing: border-box;
+	 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
 
-  .menu_burger {
-    position: absolute;
-    left: 1.66%;
-    right: 94.82%;
-    top: 3%;
-    bottom: 91.41%;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
+ .nav-wrapper {
+	 position: fixed;
+	 top: 0;
+	 bottom: 0;
+	 right: 0;
+	 left: 0;
+	 background-color: #3B1C14;
+	
+	 nav {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	 }
 
-  
+	 a {
+		font-weight: bold;
+		text-decoration: none;
+		font-size: 40px;
+		color: white;
+		margin: 30px;
+	}
+ }
+ 
+
+
