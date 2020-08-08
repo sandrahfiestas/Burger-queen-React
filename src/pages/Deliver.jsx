@@ -1,12 +1,11 @@
 import React from 'react';
-import './Deliver.scss';
 import DeliverWaiter from '../components/DeliverWaiter';
-import NavBarDeliver from '../components/NavBarDeliver';
+import NavBar from '../components/NavBar';
 
 function Deliver() {
   return (
     <div>
-      <NavBarDeliver />
+      <NavBar title="PEDIDOS POR ENTREGAR" />
       <DeliverWaiter />
     </div>
   );

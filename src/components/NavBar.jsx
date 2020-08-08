@@ -1,32 +1,27 @@
 import React from 'react';
-import './styleComponents/NavBarChef.scss';
+import MenuBurger from './MenuBurger';
 import Clock from './Clock';
 import logo from '../images/logo.png';
-import menuBurger from '../images/menu_burger.png';
 
-function NavBarChef() {
+function NavBar(props) {
   return (
     <>
       <nav className="nav-toolbar">
-        <div className="menu-burger">
-          <img src={menuBurger} className="menu_burger" alt="menu_burger" />
-        </div>
-
+        <MenuBurger />
         <div className="logo">
           <img src={logo} className="logo" alt="logo" />
         </div>
 
         <div className="nav-order">
-          <h1>COCINA</h1>
+          <h1>{props.title}</h1>
         </div>
 
         <div className="nav-time">
           <h2><Clock /></h2>
         </div>
       </nav>
-
     </>
   );
 }
 
-export default NavBarChef;
+export default NavBar;

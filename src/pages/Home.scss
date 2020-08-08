@@ -1,18 +1,4 @@
- * {
-	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
-} 
-
-body {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-} 
-
 .home-container {
-    
     height: 100vh;
     display: flex;
     align-items: center;
@@ -34,7 +20,7 @@ body {
     justify-content: center;
 }
 
-.button {
+.home-button {
     padding: 10px;
     width: 280px;
     height: 90px;

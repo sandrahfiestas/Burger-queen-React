@@ -1,6 +1,5 @@
 import React from 'react';
 import firebase from '../firebase/firebase';
-import './styleComponents/Summary.scss';
 import Clock from './Clock';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
@@ -100,7 +99,6 @@ function Summary(props) {
             </p>
           </div>
         </div>
-
         <div>
           <table>
             <thead>
@@ -151,7 +149,6 @@ function Summary(props) {
         <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
         <button className="btn-cancel" onClick={btnCancel}>CANCELAR</button>
       </div>
-
     </div>
   );
 }

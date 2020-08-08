@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import './styleComponents/Product.scss';
 import Summary from './Summary';
 
 function Product() {
@@ -51,7 +50,7 @@ function Product() {
 
         {type === 'lunch'
           ? (
-            <div className="sub-order-btns ">
+            <div className="sub-order-btns">
               <div>
                 <button className="btns-bonus" onClick={() => selecType('lunch', 'burger')}>HAMBURGUESAS</button>
               </div>

@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import iconMenu from '../images/icon_menu.png';
 import iconBurger from '../images/icon_burger.png';
-import './Home.scss';
 
 function Home() {
   return (
@@ -13,13 +12,13 @@ function Home() {
       </div>
       <div className="home-btns">
         <Link to="/menu">
-          <button className="button">
+          <button className="home-button">
             <img src={iconMenu} className="icon-home" alt="icon_menu" />
             MENÚ
           </button>
         </Link>
         <Link to="/kitchen">
-          <button className="button">
+          <button className="home-button">
             <img src={iconBurger} className="icon-home" alt="icon_burger" />
             COCINA
           </button>

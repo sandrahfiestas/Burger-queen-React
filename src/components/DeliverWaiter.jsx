@@ -22,7 +22,6 @@ function DeliverWaiter() {
   return (
     <>
       <div className="">
-
         <div className="">
           <section className="">
             <div className="row-column">
