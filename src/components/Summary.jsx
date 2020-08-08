@@ -58,13 +58,15 @@ function Summary(props) {
     } else {
       try {
         const newOrder = {
-          order: props.summary,
+          products: props.summary,
           client: name,
-          numMesa: table,
+          numberTable: table,
           status: 'pending',
           hourSend: new Date().getTime(),
+          hourEnd: null,
+          timeToCook: '',
         };
-        firebase.firestore().collection('pedidos').add(newOrder);
+        await firebase.firestore().collection('pedidos').add(newOrder);
         initial();
       } catch (error) {
         console.log(error);
