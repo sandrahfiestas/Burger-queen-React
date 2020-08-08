@@ -1,18 +1,13 @@
 import React from 'react';
-import './Menu.scss';
 import Product from '../components/Product';
-import NavBarWaiter from '../components/NavBarWaiter';
+import NavBar from '../components/NavBar';
 
 function Menu() {
   return (
 
     <div>
-      <nav className="nav-toolbar">
-        <NavBarWaiter />
-      </nav>
-      <>
-        <Product />
-      </>
+      <NavBar title="ORDEN DE PEDIDO" />
+      <Product />
     </div>
   );
 }

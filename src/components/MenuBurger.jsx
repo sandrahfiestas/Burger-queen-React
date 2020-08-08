@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import { Link } from 'react-router-dom';
 import menuBurger from '../images/menu_burger.png';
-import './styleComponents/MenuBurger.scss';
 
 const Menu = ({ toggled }) => {
   const { x } = useSpring({
@@ -31,12 +30,14 @@ const MenuBurger = () => {
   };
 
   return (
-    <div>
+    <>
       <Menu toggled={isToggled} />
       <div className="menu-burger">
-        <img src={menuBurger} onClick={toggledHandler} className="button-burger" alt="menu_burger" />
+        <button className="cover" onClick={toggledHandler}>
+          <img src={menuBurger} className="button-burger" alt="burger" />
+        </button>
       </div>
-    </div>
+    </>
   );
 };
 

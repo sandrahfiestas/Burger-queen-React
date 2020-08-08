@@ -1,12 +1,11 @@
 import React from 'react';
-import './Kitchen.scss';
-import NavBarChef from '../components/NavBarChef';
+import NavBar from '../components/NavBar';
 import OrdersChef from '../components/OrdersChef';
 
 function Kitchen() {
   return (
     <div>
-      <NavBarChef />
+      <NavBar title="COCINA" />
       <OrdersChef />
     </div>
   );

@@ -1,33 +1,55 @@
-import React from 'react';
-import './styleComponents/DeliverWaiter.scss';
+import React, { useState, useEffect } from 'react';
+import firebase from '../firebase/firebase';
 
 function DeliverWaiter() {
+  const [product, setproduct] = useState([]);
+
+  useEffect(() => {
+    const unsubscribe = firebase.firestore().collection('pedidos').orderBy('hourSend', 'asc').onSnapshot((snap) => {
+      const array = [];
+      snap.forEach((doc) => {
+        array.push(doc.data());
+      });
+      setproduct(array);
+    });
+    return unsubscribe;
+  }, []);
+
   return (
     <>
       <div className="container-kitchen">
-
         <div className="">
           <section className="">
             <div className="row-column">
-              <p className="text number-mesa">
-                N Mesa:
-              </p>
-              <p className="text client">
-                Cliente:
-              </p>
-              <p className="text hour-order">
-                Hora de pedido:
-              </p>
-              <p className="text status-order">
-                Estado:
-              </p>
-              <span className="text-menu">Pedido</span>
-              <p className="text hour-order-end">
-                Hora de termino:
-              </p>
-              <div className="orders footer">
-                <button className="btn-order-ok">Entregado</button>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>N° MESA</th>
+                    <th>CLIENTE</th>
+                    <th>HORA PEDIDO</th>
+                    <th>ESTADO</th>
+                    <th>PEDIDO</th>
+                    <th>HORA TERMINO</th>
+                    <th />
+                  </tr>
+                </thead>
+                <tbody>
+                  {
+                    product.map((item) => (
+                      <tr key={item.numMesa}>
+                        <th>{item.numMesa}</th>
+                        <th>{item.client}</th>
+                        <th>{item.hourSend}</th>
+                        <th>{item.status}</th>
+                        <th><span>ORDEN</span></th>
+                        {/* <th>{item.order}</th> */}
+                        <th>{item.hourSend}</th>
+                        <th />
+                      </tr>
+                    ))
+                  }
+                </tbody>
+              </table>
             </div>
           </section>
         </div>

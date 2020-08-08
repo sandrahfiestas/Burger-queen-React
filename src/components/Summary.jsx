@@ -1,6 +1,5 @@
 import React from 'react';
 import firebase from '../firebase/firebase';
-import './styleComponents/Summary.scss';
 import Clock from './Clock';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
@@ -46,7 +45,7 @@ function Summary(props) {
   const initial = () => {
     setName('');
     setTable('');
-    const arry = props.summary.length
+    const arry = props.summary.length;
     const array = props.summary.splice(0, arry);
     setResult(...array);
   };
@@ -78,80 +77,79 @@ function Summary(props) {
 
   return (
     <div className="">
-    <div className="breakfast-ticket scroll">
+      <div className="breakfast-ticket scroll">
 
-      <div className="ticket-header">
-        <div className="">
-          <p>
-            Ciente :
-            <input type="text" onChange={nameClient} placeholder="Nombre de cliente" value={name} className="validaty input-client" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+" />
-          </p>
+        <div className="ticket-header">
+          <div className="">
+            <p>
+              Ciente :
+              <input type="text" onChange={nameClient} placeholder="Nombre de cliente" value={name} className="validaty input-client" pattern="([a-zA-ZÁÉÍÓÚñáéíóúÑ]{1,30}\\s*)+" />
+            </p>
+          </div>
+          <div className="">
+            <p>
+              Hora de atención:
+              <Clock />
+            </p>
+            <p>
+              Número de Mesa :
+              <input type="text" onChange={numberTable} placeholder="N° mesa" value={table} className="validaty input-table" pattern="" />
+            </p>
+          </div>
         </div>
-        <div className="">
-          <p>
-            Hora de atención:
-            <Clock />
-          </p>
-          <p>
-            Número de Mesa :
-            <input type="text" onChange={numberTable} placeholder="N° mesa" value={table} className="validaty input-table" pattern="" />
-          </p>
+
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" />
+                <th scope="col" />
+                <th scope="col">Cant.</th>
+                <th scope="col">Producto</th>
+                <th scope="col">P/U</th>
+                <th scope="col">Total</th>
+                <th scope="col">Eliminar</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                  props.summary.map((item, i) => (
+                    <tr key={i} id={item.idProduct}>
+                      <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
+                      <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
+                      <th scope="col"><p className="">{item.countProduct}</p></th>
+                      <th scope="col">{item.nameProduct}</th>
+                      <th scope="col">
+                        S/
+                        {item.priceProduct}
+                      </th>
+                      <th scope="col">
+                        S/
+                        {item.priceProduct * item.countProduct}
+                      </th>
+                      <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
+                    </tr>
+                  ))
+                }
+              <tr>
+                <th colSpan={7}>
+                  <p>
+                    Total: S/
+                    {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
+                  </p>
+                </th>
+              </tr>
+            </tbody>
+          </table>
         </div>
+
       </div>
-
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col" />
-              <th scope="col" />
-              <th scope="col">Cant.</th>
-              <th scope="col">Producto</th>
-              <th scope="col">P/U</th>
-              <th scope="col">Total</th>
-              <th scope="col">Eliminar</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-                props.summary.map((item, i) => (
-                  <tr key={i} id={item.idProduct}>
-                    <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
-                    <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
-                    <th scope="col"><p className="">{item.countProduct}</p></th>
-                    <th scope="col">{item.nameProduct}</th>
-                    <th scope="col">
-                      S/
-                      {item.priceProduct}
-                    </th>
-                    <th scope="col">
-                      S/
-                      {item.priceProduct * item.countProduct}
-                    </th>
-                    <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
-                  </tr>
-                ))
-              }
-            <tr>
-              <th colSpan={7}>
-                <p>
-                  Total: S/
-                  {props.summary.reduce((acum, item) => acum + item.priceProduct * item.countProduct, 0)}
-                </p>
-              </th>
-            </tr>
-          </tbody>
-        </table>
+      <div className="menu-btns-active">
+        <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
+        <button className="btn-cancel" onClick={bntCancel}>CANCELAR</button>
       </div>
-
     </div>
-    <div className="menu-btns-active">
-      <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
-      <button className="btn-cancel" onClick={bntCancel}>CANCELAR</button>
-    </div>
-
-  </div>
-);
-};
+  );
+}
 
 export default Summary;
