@@ -57,13 +57,15 @@ function Summary(props) {
     } else {
       try {
         const newOrder = {
-          order: props.summary,
+          products: props.summary,
           client: name,
-          numMesa: table,
+          numberTable: table,
           status: 'pending',
           hourSend: new Date().getTime(),
+          hourEnd: null,
+          timeToCook: '',
         };
-        firebase.firestore().collection('pedidos').add(newOrder);
+        await firebase.firestore().collection('pedidos').add(newOrder);
         initial();
       } catch (error) {
         console.log(error);
@@ -71,7 +73,7 @@ function Summary(props) {
     }
   };
 
-  const bntCancel = () => {
+  const btnCancel = () => {
     initial();
   };
 
@@ -97,7 +99,6 @@ function Summary(props) {
             </p>
           </div>
         </div>
-
         <div>
           <table>
             <thead>
@@ -113,24 +114,24 @@ function Summary(props) {
             </thead>
             <tbody>
               {
-                  props.summary.map((item, i) => (
-                    <tr key={i} id={item.idProduct}>
-                      <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
-                      <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
-                      <th scope="col"><p className="">{item.countProduct}</p></th>
-                      <th scope="col">{item.nameProduct}</th>
-                      <th scope="col">
-                        S/
-                        {item.priceProduct}
-                      </th>
-                      <th scope="col">
-                        S/
-                        {item.priceProduct * item.countProduct}
-                      </th>
-                      <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
-                    </tr>
-                  ))
-                }
+                props.summary.map((item, i) => (
+                  <tr key={i} id={item.idProduct}>
+                    <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
+                    <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
+                    <th scope="col"><p className="">{item.countProduct}</p></th>
+                    <th scope="col">{item.nameProduct}</th>
+                    <th scope="col">
+                      S/
+                      {item.priceProduct}
+                    </th>
+                    <th scope="col">
+                      S/
+                      {item.priceProduct * item.countProduct}
+                    </th>
+                    <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
+                  </tr>
+                ))
+              }
               <tr>
                 <th colSpan={7}>
                   <p>
@@ -146,7 +147,7 @@ function Summary(props) {
       </div>
       <div className="menu-btns-active">
         <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
-        <button className="btn-cancel" onClick={bntCancel}>CANCELAR</button>
+        <button className="btn-cancel" onClick={btnCancel}>CANCELAR</button>
       </div>
     </div>
   );
