@@ -1,37 +1,63 @@
 import React from 'react';
+import firebase from '../firebase/firebase';
 import './styleComponents/DeliverWaiter.scss';
 
 function DeliverWaiter() {
+  const [orders, getOrders] = React.useState([]);
+
+  React.useEffect(() => {
+    const confirmedOrders = firebase.firestore().collection('pedidos');
+    confirmedOrders
+      .where('status', '==', 'ready')
+      .onSnapshot({ includeMetadataChanges: true }, ((snap) => {
+        const gettingOrders = snap.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+
+        getOrders(gettingOrders);
+      }));
+  }, []);
+
   return (
     <>
-      <div className="container-kitchen">
+      <div className="">
 
         <div className="">
           <section className="">
             <div className="row-column">
-              <p className="text number-mesa">
-                N Mesa:
-              </p>
-              <p className="text client">
-                Cliente:
-              </p>
-              <p className="text hour-order">
-                Hora de pedido:
-              </p>
-              <p className="text status-order">
-                Estado:
-              </p>
-              <span className="text-menu">Pedido</span>
-              <p className="text hour-order-end">
-                Hora de termino:
-              </p>
-              <div className="orders footer">
-                <button className="btn-order-ok">Entregado</button>
-              </div>
+              <table>
+                <thead>
+                  <tr>
+                    <th>N° MESA</th>
+                    <th>CLIENTE</th>
+                    <th>PEDIDO</th>
+                    <th>ESTADO</th>
+                    <th>ENTREGADO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {orders.map((order, i) => (
+                    <tr key={i}>
+                      <td>{order.numberTable}</td>
+                      <td>{order.client}</td>
+                      <td>
+                        <ul>
+                          {order.products.map((product, j) => (
+                            <li key={j}>
+                              {product.countProduct}
+                              {product.nameProduct}
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </section>
         </div>
-
       </div>
     </>
   );
