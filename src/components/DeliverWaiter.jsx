@@ -1,4 +1,5 @@
 import React from 'react';
+import swal from 'sweetalert';
 import firebase from '../firebase/firebase';
 import './styleComponents/DeliverWaiter.scss';
 
@@ -19,6 +20,25 @@ function DeliverWaiter() {
       }));
   }, []);
 
+  const deliverOrder = async (id) => {
+    swal({
+      title: '¿Estas seguro que quieres eliminarlo?',
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          swal('Pedido eliminado con exito!', {
+            icon: 'success',
+          });
+          firebase.firestore().collection('pedidos').doc(id).delete();
+        } else {
+          swal('Continue');
+        }
+      });
+  };
+
   return (
     <>
       <div className="">
@@ -31,7 +51,6 @@ function DeliverWaiter() {
                     <th>N° MESA</th>
                     <th>CLIENTE</th>
                     <th>PEDIDO</th>
-                    <th>ESTADO</th>
                     <th>ENTREGADO</th>
                   </tr>
                 </thead>
@@ -50,6 +69,8 @@ function DeliverWaiter() {
                           ))}
                         </ul>
                       </td>
+                      <td><button onClick={() => deliverOrder(order.id)}>Entregado</button></td>
+
                     </tr>
                   ))}
                 </tbody>
