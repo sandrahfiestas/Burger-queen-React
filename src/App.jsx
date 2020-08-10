@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 import './css/Estilos.css';
 import {
   BrowserRouter as Router,

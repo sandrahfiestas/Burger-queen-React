@@ -1,5 +1,5 @@
 import React from 'react';
-import firebase from '../firebase/firebase';
+import addOrder from '../controller/orders';
 import Clock from './Clock';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
@@ -51,25 +51,22 @@ function Summary(props) {
   };
 
   // Enviando el pedido a Firebase
-  const addOrder = async () => {
+  
+  const handleAddOrder = () => {
     if (!name.trim() || !table.trim()) {
       console.log('Campo(s) vacio(s). Verifique');
     } else {
-      try {
-        const newOrder = {
-          products: props.summary,
-          client: name,
-          numberTable: table,
-          status: 'pending',
-          hourSend: new Date().getTime(),
-          hourEnd: null,
-          timeToCook: '',
-        };
-        await firebase.firestore().collection('pedidos').add(newOrder);
-        initial();
-      } catch (error) {
-        console.log(error);
-      }
+      const newOrder = {
+        products: props.summary,
+        client: name,
+        numberTable: table,
+        status: 'pending',
+        hourSend: new Date().getTime(),
+        hourEnd: null,
+        timeToCook: '',
+      };
+      addOrder(newOrder);
+      initial();
     }
   };
 
@@ -116,8 +113,8 @@ function Summary(props) {
               {
                 props.summary.map((item, i) => (
                   <tr key={i} id={item.idProduct}>
-                    <th scope="col"><img src={iconMore} onClick={(e) => btnMore(item)} alt="" /></th>
-                    <th scope="col"><img src={iconLess} onClick={(e) => btnLess(item)} alt="" /></th>
+                    <th scope="col"><img src={iconMore} onClick={() => btnMore(item)} alt="" /></th>
+                    <th scope="col"><img src={iconLess} onClick={() => btnLess(item)} alt="" /></th>
                     <th scope="col"><p className="">{item.countProduct}</p></th>
                     <th scope="col">{item.nameProduct}</th>
                     <th scope="col">
@@ -146,7 +143,7 @@ function Summary(props) {
 
       </div>
       <div className="menu-btns-active">
-        <button className="btn-accept" onClick={addOrder}>CONFIRMAR</button>
+        <button className="btn-accept" onClick={handleAddOrder}>CONFIRMAR</button>
         <button className="btn-cancel" onClick={btnCancel}>CANCELAR</button>
       </div>
     </div>

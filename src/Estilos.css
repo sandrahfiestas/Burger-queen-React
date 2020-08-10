@@ -38,12 +38,13 @@
 }
 
 .nav-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #3B1C14;
+  background-color: red;
+  z-index: 2;
 }
 .nav-wrapper nav {
   width: 100%;
@@ -332,8 +333,24 @@ nav {
   opacity: 0.9;
 }
 
-.prueba {
-  background-color: red;
+.container-kitchen {
+  position: absolute;
+  width: 919px;
+  height: 599px;
+  left: 50px;
+  top: 100px;
+  background: rgba(59, 28, 20, 0.97);
+  border: 2px solid #eae2b7;
+  box-sizing: border-box;
+}
+
+.row-column {
+  position: absolute;
+  width: 836px;
+  height: 471px;
+  left: 42px;
+  top: 86px;
+  background: #FFFFFF;
 }
 
 * {

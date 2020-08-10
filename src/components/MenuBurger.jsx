@@ -17,6 +17,7 @@ const Menu = ({ toggled }) => {
         <Link to="/">Ir a Inicio</Link>
         <Link to="/menu">Menú</Link>
         <Link to="/deliver">Entregar pedidos</Link>
+        <Link to="/kitchen">Cocina</Link>
       </nav>
     </animated.div>
   );
