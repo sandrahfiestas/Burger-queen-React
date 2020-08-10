@@ -54,15 +54,15 @@ function OrdersChef() {
                   </tr>
                 </thead>
                 <tbody>
-                  {orders.map((order, i) => (
-                    <tr key={i}>
+                  {orders.map((order) => (
+                    <tr key={order.id}>
                       <td>{order.numberTable}</td>
                       <td>{order.client}</td>
                       <td>{moment(order.hourSend).format('LT')}</td>
                       <td>
                         <ul>
-                          {order.products.map((product, j) => (
-                            <li key={j}>
+                          {order.products.map((product) => (
+                            <li key={product.idProduct}>
                               {product.countProduct}
                               {product.nameProduct}
                             </li>
