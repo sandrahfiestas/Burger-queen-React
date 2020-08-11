@@ -21,9 +21,15 @@ describe('App', () => {
     screen.debug();
   });
 
-  test('renders', () => {
+  test('renders btn MENÚ', () => {
     const { getByText } = render(<App />);
-    const option = getByText('MENÚ');
+    const option = getByText(/^MENÚ$/);
+    expect(option).toBeInTheDocument();
+  });
+
+  test('renders btn COCINA', () => {
+    const { getByText } = render(<App />);
+    const option = getByText('COCINA');
     expect(option).toBeInTheDocument();
   });
 });
