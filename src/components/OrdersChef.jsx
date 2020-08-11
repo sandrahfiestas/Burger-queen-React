@@ -1,5 +1,4 @@
 import React from 'react';
-import './styleComponents/OrdersChef.scss';
 import moment from 'moment';
 import 'moment/locale/es';
 import swal from 'sweetalert';
@@ -56,10 +55,9 @@ function OrdersChef() {
   return (
     <>
       <div className="container-kitchen">
-
-        <div className="">
+        <div className="kitchen-detail">
           <section className="">
-            <div className="row-column">
+            <div className="kitchen-table">
               <table>
                 <thead>
                   <tr>

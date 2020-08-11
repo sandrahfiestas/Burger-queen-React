@@ -1,7 +1,6 @@
 import React from 'react';
 import swal from 'sweetalert';
 import firebase from '../firebase/firebase';
-import './styleComponents/DeliverWaiter.scss';
 
 function DeliverWaiter() {
   const [orders, getOrders] = React.useState([]);
@@ -41,10 +40,10 @@ function DeliverWaiter() {
 
   return (
     <>
-      <div className="">
-        <div className="">
+      <div className="container-deliver">
+        <div className="deliver-detail">
           <section className="">
-            <div className="row-column">
+            <div className="deliver-table">
               <table>
                 <thead>
                   <tr>
