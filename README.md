@@ -7,6 +7,10 @@ Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
 seguir creciendo, implementamos un sistema que nos ayuda a tomar los pedidos de
 nuestros clientes.
 
+![home](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/Home.png)
+
+---
+
  Tenemos 2 menús: uno para el desayuno:
 
 > | Ítem                      | Precio S/.|
