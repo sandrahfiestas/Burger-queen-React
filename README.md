@@ -1,68 +1,129 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Burger Queen
+![burger-queen](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/logo.png)
 
-## Available Scripts
+Somos **Burguer Queen**, una cadena de comida 24hrs.
 
-In the project directory, you can run:
+Nuestra propuesta de servicio 24hrs ha tenido muy buena acogida y, para
+seguir creciendo, implementamos un sistema que nos ayuda a tomar los pedidos de
+nuestros clientes.
 
-### `npm start`
+![home](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/Home.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+ Tenemos 2 menús: uno para el desayuno:
 
-### `npm test`
+> | Ítem                      | Precio S/.|
+> | ------------------------- | --------- |
+> | Café americano            | 5         |
+> | Café con leche            | 7         |
+> | Sandwich de jamón y queso | 10        |
+> | Jugo de frutas natural    | 7         |
+>
+ Y otro menú para el resto del día:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> | Ítem                 | Precio |
+> | -------------------- | ------ |
+> | **Hamburguesas**     | **S/** |
+> | Hamburguesa simple   | 10     |
+> | Hamburguesa doble    | 15     |
+> | **Acompañamientos**  | **S/** |
+> | Papas fritas         | 5      |
+> | Aros de cebolla      | 5      |
+> | **Para tomar**       | **S/** |
+> | Agua 500ml           | 5      |
+> | Agua 750ml           | 7      |
+> | Bebida/gaseosa 500ml | 7      |
+> | Bebida/gaseosa 750ml | 10     |
 
-### `npm run build`
+ Nuestros clientes pueden escoger entre hamburguesas de res,
+ de pollo, o vegetariana. Además, por \$ 1 adicional, pueden agregarle queso
+ o huevo.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ ---
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![desayuno](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/desayuno.jpg)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+La interfaz muestra dos menús (desayuno y almuerzo/cena), cada uno
+con todos sus _productos_. En donde se pueden elegir los _productos_ los mismo que serán mostrados en el _resumen del pedido_ con el
+costo total.
 
-### `npm run eject`
+![almuerzo](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/almuerzo.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+El jefe de cocina puede ver los pedidos de los clientes en orden y marcar cuales están listos para saber qué se debe cocinar y avisar a los(as) mesesros(as) que un pedido está listo para servirlo a un cliente, asi como el tiempo que tomo en ser preparado dicho pedido.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![cocina](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/cocina.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### HTML y CSS
 
-### Code Splitting
+- [ ] HTML semántico
+- [ ] CSS flexbox
+- [ ] Sass
+- [ ] Maquetación
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Frontend Development
 
-### Analyzing the Bundle Size
+- [ ] Componentes
+- [ ] Manejo del estado
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### PWA
 
-### Making a Progressive Web App
+- [ ] Concepto
+- [ ] Utilidad
+- [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
+- [ ] Qué es un `serviceWorker`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+### React
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
+- [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
+- [ ] `props`
+- [ ] [Manejo de eventos](https://es.reactjs.org/docs/handling-events.html)
+- [ ] [Listas y keys](https://es.reactjs.org/docs/lists-and-keys.html)
+- [ ] [Renderizado condicional](https://es.reactjs.org/docs/conditional-rendering.html)
+- [ ] [Levantamiento de estados](https://es.reactjs.org/docs/lifting-state-up.html)
+- [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
+- [ ] [`CSS` modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
+- [ ] [React Router](https://reacttraining.com/react-router/web)
 
-### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### Firebase
 
-### `npm run build` fails to minify
+- [ ] Firestore
+- [ ] Firebase security rules
+- [ ] Observables
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Testing
+
+- [ ] Testeo de tus interfaces
+- [ ] Testeo de componentes
+- [ ] Testeo asíncrono
+- [ ] Mocking
+
+### Colaboración en Github
+
+- [ ] Branches
+- [ ] Pull Requests
+- [ ] Tags
+
+### Organización en Github
+
+- [ ] Projects
+- [ ] Issues
+- [ ] Labels
+- [ ] Milestones
+
+### Buenas prácticas de desarrollo
+
+- [ ] Modularización
+- [ ] Nomenclatura / Semántica
+- [ ] Linting
+
+---
+
