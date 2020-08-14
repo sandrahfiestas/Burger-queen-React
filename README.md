@@ -9,7 +9,7 @@ nuestros clientes.
 
  Tenemos 2 menús: uno para el desayuno:
 
-> | Ítem                      | Precio \S |
+> | Ítem                      | Precio S/.|
 > | ------------------------- | --------- |
 > | Café americano            | 5         |
 > | Café con leche            | 7         |
@@ -20,13 +20,13 @@ nuestros clientes.
 
 > | Ítem                 | Precio |
 > | -------------------- | ------ |
-> | **Hamburguesas**     | **\S** |
+> | **Hamburguesas**     | **S/** |
 > | Hamburguesa simple   | 10     |
 > | Hamburguesa doble    | 15     |
-> | **Acompañamientos**  | **\S** |
+> | **Acompañamientos**  | **S/** |
 > | Papas fritas         | 5      |
 > | Aros de cebolla      | 5      |
-> | **Para tomar**       | **\S** |
+> | **Para tomar**       | **S/** |
 > | Agua 500ml           | 5      |
 > | Agua 750ml           | 7      |
 > | Bebida/gaseosa 500ml | 7      |
@@ -42,29 +42,14 @@ La interfaz muestra dos menús (desayuno y resto del día), cada uno
 con todos sus _productos_. En donde se pueden elegir los _productos_ los mismo que serán mostrados en el _resumen del pedido_ con el
 costo total.
 
+![almuerzo](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/desayuno.jpg)
 
 
 
 
-## Objetivos de aprendizaje
 
-1. El objetivo principal de es aprender a construir una _interfaz web_ usando
-   el _framework_ elegido ([React](https://reactjs.org/), [Vue](https://es.vuejs.org/index.html) o [Angular](https://angular.io/)) o vanilla JS. Todos estos frameworks de
-   Front-end atacan el mismo problema: **cómo mantener la interfaz y el estado
-   sincronizados**. Así que esta experiencia espera familiarizarte con el concepto
-   de _estado de pantalla_, y cómo cada cambio sobre el estado se va a
-   ir reflejando en la interfaz (por ejemplo, cada vez que agregamos un _producto_
-   a un _pedido_, la interfaz debe actualizar la lista del pedido y el total).
 
-2. Como objetivo secundario, deberás seguir las recomendaciones para PWAs
-   (_Progressive Web Apps_), lo cual incluye conceptos como **offline**. Para
-   guiarte con respecto a este tema te recomendamos usar [Lighthouse](https://developers.google.com/web/tools/lighthouse/?hl=es),
-   que es una herramienta de Google que nos ayuda a asegurar que nuestras web apps
-   sigan "buenas prácticas". De hecho, usaremos Lighthouse a la hora de evaluar el
-   proyecto.
 
-Recuerda colocar en esta seccion los objetivos de aprendizaje que quedaron
-pendientes de tu proyecto anterior.
 
 ### HTML y CSS
 
@@ -85,16 +70,6 @@ pendientes de tu proyecto anterior.
 - [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
 - [ ] Qué es un `serviceWorker`
 
-### Angular
-
-- [ ] [Uso de Components | Templates](https://angular.io/guide/architecture-components#introduction-to-components)
-- [ ] [Directivas estructurales (ngIf / ngFor)](https://angular.io/guide/template-syntax#built-in-structural-directives)
-- [ ] [@Input | @Ouput](https://angular.io/guide/component-interaction#component-interaction)
-- [ ] [Creación y uso de servicios](https://angular.io/guide/architecture-services#providing-services)
-- [ ] [Manejos de rutas](https://angular.io/guide/router)
-- [ ] [Uso de Observables](https://angular.io/guide/observables-in-angular)
-- [ ] [Uso de HttpClient](https://angular.io/guide/http)
-- [ ] [Estilos de componentes (ngStyle / ngClass)](https://angular.io/guide/template-syntax#built-in-directives)
 
 ### React
 
@@ -109,20 +84,6 @@ pendientes de tu proyecto anterior.
 - [ ] [`CSS` modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 - [ ] [React Router](https://reacttraining.com/react-router/web)
 
-### Vue
-
-- [ ] [Instancia de Vue.js](https://es.vuejs.org/v2/guide/instance.html)
-- [ ] [Datos y métodos](https://es.vuejs.org/v2/guide/instance.html#Datos-y-Metodos)
-- [ ] [Uso y creación de Componentes](https://vuejs.org/v2/guide/components.html)
-- [ ] [Props](https://es.vuejs.org/v2/guide/components.html#Pasando-datos-a-componentes-secundarios-con-Props)
-- [ ] Directivas ([v-bind](https://es.vuejs.org/v2/api/#v-bind) | [v-model](https://es.vuejs.org/v2/guide/forms.html))
-- [ ] Renderizado condicional ([v-if](https://es.vuejs.org/v2/guide/conditional.html#v-if) | [v-else](https://es.vuejs.org/v2/guide/conditional.html#v-else))
-- [ ] Iteraciones ([v-for](https://es.vuejs.org/v2/guide/list.html#Mapeando-una-matriz-a-elementos-con-v-for))
-- [ ] Eventos ([v-on](https://es.vuejs.org/v2/guide/events.html))
-- [ ] [Propiedades Computadas y Observadores](https://es.vuejs.org/v2/guide/computed.html)
-- [ ] [Router](https://router.vuejs.org/guide/#html)
-- [ ] [Clases y Estilos](https://es.vuejs.org/v2/guide/class-and-style.html)
-- [ ] [Gestión de Estado](https://es.vuejs.org/v2/guide/state-management.html#Gestion-de-estado-simple-desde-cero)
 
 ### Firebase
 
@@ -155,59 +116,6 @@ pendientes de tu proyecto anterior.
 - [ ] Modularización
 - [ ] Nomenclatura / Semántica
 - [ ] Linting
-
----
-
-## Consideraciones
-
-- Este proyecto se debe "resolver" de a pares.
-
-- La duración propuesta del proyecto es 5 sprints, con una duración de una semana cada uno.
-
-- Trabaja en una historia hasta terminarla antes de pasar a la siguiente.
-
-- Trabaja hasta la historia que puedas en el tiempo especificado.
-
-- La lógica del proyecto debe estar implementada completamente en JavaScript
-  (ES6+), HTML y CSS y empaquetada de manera automatizada.
-
-- En este proyecto Sí está permitido usar librerías o frameworks
-  (debes elegir entre [React](https://reactjs.org/), [Vue](https://es.vuejs.org/index.html),
-  [Angular](https://angular.io/) o Vanilla Js).
-
-- La aplicación debe ser un _Single Page App_. Los pedidos los tomaremos desde una
-  _tablet_, pero **no queremos una app nativa**, sino una web app que sea
-  **responsive** y pueda funcionar **offline**.
-
-- La interfaz debe estar diseñada específicamente para correr en
-  **tablets**.
-
-- Necesitamos pensar bien en el aspecto UX de quienes van a tomar los pedidos,
-  el tamaño y aspecto de los botones, la visibilidad del estado actual del
-  pedido, etc.
-
-- La aplicación desplegada debe tener 80% o más el las puntuaciones de
-  Performance, Progressive Web App, Accessibility y Best Practices de Lighthouse.
-
-- Deberas de guardar la información de los pedidos realizados por
-  lo cual te recomendamos utilizar [Firebase](https://firebase.google.com/).
-
-- La aplicación debe hacer uso de `npm-scripts` y contar con scripts `start`,
-  `test`, `build` y `deploy`, que se encarguen de arrancar, correr las pruebas,
-  empaquetar y desplegar la aplicación respectivamente.
-
-- Los tests unitarios deben cubrir un mínimo del 90% de _statements_, _functions_,
-  _lines_ y _branches_.
-
-- Por otro lado, deberás definir la estructura de carpetas y archivos que consideres
-  necesaria. Puedes guiarte de las convenciones del _framework_ elegido. Por ende,
-  los _tests_ y el _setup_ necesario para ejecutarlos, serán hechos por ti.
-
-## Criterios de aceptación del proyecto
-
-### Definición del producto
-
-El [_Product Owner_](https://www.youtube.com/watch?v=r2hU7MVIzxs&t=202s) nos presenta este _backlog_ que es el resultado de su trabajo con el cliente hasta hoy.
 
 ---
 
