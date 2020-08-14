@@ -36,19 +36,23 @@ nuestros clientes.
  de pollo, o vegetariana. Además, por \$ 1 adicional, pueden agregarle queso
  o huevo.
 
+ ---
+
 ![desayuno](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/desayuno.jpg)
 
-La interfaz muestra dos menús (desayuno y resto del día), cada uno
+La interfaz muestra dos menús (desayuno y almuerzo/cena), cada uno
 con todos sus _productos_. En donde se pueden elegir los _productos_ los mismo que serán mostrados en el _resumen del pedido_ con el
 costo total.
 
-![almuerzo](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/desayuno.jpg)
+![almuerzo](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/almuerzo.jpg)
+
+El jefe de cocina puede ver los pedidos de los clientes en orden y marcar cuales están listos para saber qué se debe cocinar y avisar a los(as) mesesros(as) que un pedido está listo para servirlo a un cliente, asi como el tiempo que tomo en ser preparado dicho pedido.
+
+![cocina](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/cocina.jpg)
 
 
 
-
-
-
+---
 
 
 ### HTML y CSS
@@ -119,106 +123,3 @@ costo total.
 
 ---
 
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
-
-Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
-memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
-que se puedan ir preparando en orden.
-
-##### Criterios de aceptación
-
-Lo que debe ocurrir para que se satisfagan las necesidades del usuario
-
-- Anotar nombre de cliente.
-- Agregar productos al pedido.
-- Eliminar productos.
-- Ver resumen y el total de la compra.
-- Enviar pedido a cocina (guardar en alguna base de datos).
-- Se ve y funciona bien en una _tablet_
-
-##### Definición de terminado
-
-Lo acordado que debe ocurrir para decir que la historia está terminada.
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
----
-
-#### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
-
-Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
-marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
-que un pedido está listo para servirlo a un cliente.
-
-##### Criterios de aceptación
-
-- Ver los pedidos ordenados según se van haciendo.
-- Marcar los pedidos que se han preparado y están listos para servirse.
-- Ver el tiempo que tomó prepara el pedido desde que llegó hasta que se
-  marcó como completado.
-
-##### Definición de terminado
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-
----
-
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
-
-Yo como meserx quiero ver los pedidos que están preparados para entregarlos
-rápidamente a los clientes que las hicieron.
-
-##### Criterios de aceptación
-
-- Ver listado de pedido listos para servir.
-- Marcar pedidos que han sido entregados.
-
-##### Definición de terminado
-
-- Debes haber recibido _code review_ de al menos una compañera.
-- Haces _test_ unitarios y, además, has testeado tu producto manualmente.
-- Hiciste _tests_ de usabilidad e incorporaste el _feedback_ del usuario.
-- Desplegaste tu aplicación y has etiquetado tu versión (git tag).
-- Los datos se deben mantener íntegros, incluso después de que un pedido ha
-  terminado. Todo esto para poder tener estadísticas en el futuro.
-
----
-
-## Pistas / Tips
-
-### Frameworks / libraries
-
-- [React](https://reactjs.org/)
-- [Angular](https://angular.io/)
-- [Vue](https://es.vuejs.org/index.html)
-
-### Herramientas
-
-- [npm-scripts](https://docs.npmjs.com/misc/scripts)
-- [Babel](https://babeljs.io/)
-- [webpack](https://webpack.js.org/)
-
-### PWA
-
-- [Tu primera Progressive Web App - Google developers](https://developers.google.com/web/fundamentals/codelabs/your-first-pwapp/?hl=es)
-- [Progressive Web Apps - codigofacilito.com](https://codigofacilito.com/articulos/progressive-apps)
-- [offlinefirst.org](http://offlinefirst.org/)
-- [Usando Service Workers - MDN](https://developer.mozilla.org/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Cómo habilitar datos sin conexión - Firebase Docs](https://firebase.google.com/docs/firestore/manage-data/enable-offline?hl=es-419)
-
-### Serverless
-
-- [Qué es eso de serverless? - @PamRucinque en Medium](https://medium.com/@PamRucinque/qu%C3%A9-es-eso-de-serverless-f4f6c8949b87)
-- [Qué es Serverless? | FooBar - YouTube](https://www.youtube.com/watch?v=_SYHUpLi-2U)
-- [Firebase](https://firebase.google.com/)
-- [Serverless Architectures - Martin Fowler](https://www.martinfowler.com/articles/serverless.html)
-
-### Cloud functions
-
-- [Cloud functions - Firebase Docs](https://firebase.google.com/docs/functions/?hl=es-419)
