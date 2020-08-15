@@ -26,13 +26,13 @@
   height: 90px;
   left: 600px;
   top: 150px;
+  font-size: 28px;
   background: #EAE2B7;
   border: 2px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 22px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 28px;
   font-weight: bold;
   margin-top: 25px;
 }
@@ -43,7 +43,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #3B1C14;
+  background-color: #3b1c14;
 }
 .nav-wrapper nav {
   width: 100%;
@@ -57,7 +57,7 @@
   font-weight: bold;
   text-decoration: none;
   font-size: 40px;
-  color: white;
+  color: #ffffff;
   margin: 30px;
 }
 
@@ -157,20 +157,20 @@ nav {
   height: 60px;
   left: 600px;
   top: 150px;
+  font-size: 28px;
   background: #f2c87b;
   border: 3px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 22px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 28px;
   font-weight: bold;
   margin-top: 25px;
   outline: none;
   cursor: pointer;
 }
 .btns-menu:hover {
-  background-color: #3B1C14;
+  background-color: #3b1c14;
   color: #ffffff;
   border: 3px solid #ffffff;
 }
@@ -181,8 +181,7 @@ nav {
   justify-content: center;
   margin-top: 10px;
 }
-
-.sub-order-btns > div {
+.sub-order-btns div {
   margin: 6px;
   text-align: center;
 }
@@ -193,21 +192,20 @@ nav {
   height: 45px;
   left: 600px;
   top: 150px;
+  font-size: 18px;
   background: #f2c87b;
   border: 3px solid #000000;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 22px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 18px;
   font-weight: bold;
   margin-top: 25px;
   outline: none;
   cursor: pointer;
 }
-
 .btns-bonus:hover {
-  background-color: #3B1C14;
+  background-color: #3b1c14;
   color: #ffffff;
   border: 3px solid #ffffff;
 }
@@ -224,11 +222,11 @@ nav {
   width: 100%;
   height: 85%;
   border-radius: 30px;
-  background-color: white;
+  background-color: #ffffff;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  box-shadow: 20px 20px 14px #3B1C14;
+  box-shadow: 20px 20px 14px #3b1c14;
 }
 
 .breakfast-item {
@@ -254,7 +252,7 @@ nav {
   cursor: pointer;
 }
 .btn-add:hover {
-  background-color: #6e3729;
+  background-color: #3b1c14;
   color: #ffffff;
   border: 2px solid #ffffff;
 }
@@ -263,7 +261,7 @@ nav {
   width: 100%;
   height: 60%;
   border-radius: 30px;
-  background-color: white;
+  background-color: #ffffff;
 }
 
 .scroll {
@@ -296,38 +294,38 @@ nav {
   margin-top: 20px;
 }
 
-.btn-accept {
+#confirm {
   padding: 3px;
   width: 170px;
   height: 45px;
   background: #40916C;
-  border: 1px solid #FFFFFF;
+  border: 1px solid #ffffff;
   box-shadow: 0px 4px 4px #40916C;
   border-radius: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
   outline: none;
   cursor: pointer;
 }
-.btn-accept:hover {
+#confirm:hover {
   background-color: #0b3f28;
   opacity: 0.9;
 }
 
-.btn-cancel {
+#cancel {
   padding: 3px;
   width: 170px;
   height: 45px;
   background: #D0302A;
-  border: 1px solid #FFFFFF;
-  box-shadow: 0px 4px 4px #D62020;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 4px 4px #D0302A;
   border-radius: 22px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 4px 0px 4px rgba(0, 0, 0, 0.25);
   outline: none;
   cursor: pointer;
 }
-.btn-cancel:hover {
+#cancel:hover {
   background-color: #720b08;
   opacity: 0.9;
 }
@@ -344,7 +342,7 @@ nav {
   margin: 50px auto;
   justify-content: center;
   background: rgba(59, 28, 20, 0.97);
-  border: 2px solid #eae2b7;
+  border: 2px solid #EAE2B7;
   box-sizing: border-box;
 }
 
@@ -353,7 +351,7 @@ nav {
   height: 471px;
   left: 42px;
   top: 86px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .container-deliver {
@@ -368,7 +366,7 @@ nav {
   margin: 50px auto;
   justify-content: center;
   background: rgba(59, 28, 20, 0.97);
-  border: 2px solid #eae2b7;
+  border: 2px solid #EAE2B7;
   box-sizing: border-box;
 }
 
@@ -377,7 +375,7 @@ nav {
   height: 471px;
   left: 42px;
   top: 86px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 * {
