@@ -2,6 +2,7 @@
 $white: #ffffff;
 $beige: #EAE2B7;
 $light-brown: #f2c87b;
+$mediun-brown: #b78856;
 $red: #D0302A;
 $dark-red: #720b08;
 $green: #40916C;
@@ -45,4 +46,34 @@ $title: 38px;
         background-color: $dark-color;
         opacity: 0.9;
       }
+}
+
+
+@mixin scroll {
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 15px;   
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-brown;
+    border-radius: 20px;
+    border: 1.5px solid $brown;
+
+    &:hover {
+      background-color: $mediun-brown;
+      border: 1px solid $beige
+    }
+
+    &:active {
+      background-color: $brown;
+      border: 1px solid $beige
+    }
+  }
+
+  &::-webkit-scrollbar-track:active {
+    background: $beige;
+    border-radius: 20px;
+  }
 }
