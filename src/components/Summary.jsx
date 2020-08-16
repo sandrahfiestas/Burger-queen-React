@@ -76,7 +76,7 @@ function Summary(props) {
 
   return (
     <div className="">
-      <div className="breakfast-ticket scroll">
+      <div className="breakfast-ticket">
 
         <div className="ticket-header">
           <div className="">
