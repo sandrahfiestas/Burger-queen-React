@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable max-len */
 import React from 'react';
 import addOrder from '../controller/orders';
 import Clock from './Clock';
@@ -112,9 +114,9 @@ function Summary(props) {
             <tbody>
               {
                 props.summary.map((item, i) => (
-                  <tr key={i} id={item.idProduct}>
-                    <th scope="col"><img src={iconMore} onClick={() => btnMore(item)} alt="" /></th>
-                    <th scope="col"><img src={iconLess} onClick={() => btnLess(item)} alt="" /></th>
+                  <tr key={item.idProduct} id={item.idProduct}>
+                    <th scope="col"><button onClick={() => btnMore(item)}><img src={iconMore} alt="" /></button></th>
+                    <th scope="col"><button onClick={() => btnLess(item)}><img src={iconLess} alt="" /></button></th>
                     <th scope="col"><p className="">{item.countProduct}</p></th>
                     <th scope="col">{item.nameProduct}</th>
                     <th scope="col">
@@ -125,7 +127,7 @@ function Summary(props) {
                       S/
                       {item.priceProduct * item.countProduct}
                     </th>
-                    <th scope="col"><img src={iconDelete} id={i} onClick={deleteItem} alt="" /></th>
+                    <th scope="col"><button id={i} onClick={deleteItem}><img src={iconDelete} alt="" /></button></th>
                   </tr>
                 ))
               }

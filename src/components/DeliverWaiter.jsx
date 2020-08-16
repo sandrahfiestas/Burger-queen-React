@@ -1,6 +1,8 @@
+/* eslint-disable max-len */
 import React from 'react';
 import swal from 'sweetalert';
 import firebase from '../firebase/firebase';
+import deliverOrder from '../controller/deliverWaiter';
 
 function DeliverWaiter() {
   const [orders, getOrders] = React.useState([]);
@@ -19,7 +21,7 @@ function DeliverWaiter() {
       }));
   }, []);
 
-  const deliverOrder = async (id) => {
+  const handleDeliverOrder = async (completed) => {
     swal({
       title: '¿Estas seguro que quieres eliminarlo?',
       icon: 'warning',
@@ -31,7 +33,7 @@ function DeliverWaiter() {
           swal('Pedido eliminado con exito!', {
             icon: 'success',
           });
-          firebase.firestore().collection('pedidos').doc(id).delete();
+          deliverOrder(completed);
         } else {
           swal('Continue');
         }
@@ -68,7 +70,7 @@ function DeliverWaiter() {
                           ))}
                         </ul>
                       </td>
-                      <td><button onClick={() => deliverOrder(order.id)}>Entregado</button></td>
+                      <td><button onClick={() => handleDeliverOrder(order.id)}>Entregado</button></td>
 
                     </tr>
                   ))}

@@ -1,12 +1,12 @@
 /* eslint-disable no-console */
 import firebase from '../firebase/firebase';
 
-const addOrder = async (newOrder) => {
+const deliverOrder = async (id) => {
   try {
-    await firebase.firestore().collection('pedidos').add(newOrder);
+    await firebase.firestore().collection('pedidos').doc(id).delete();
   } catch (error) {
     console.log(error);
   }
 };
 
-export default addOrder;
+export default deliverOrder;

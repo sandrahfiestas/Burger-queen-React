@@ -3,6 +3,7 @@ import moment from 'moment';
 import 'moment/locale/es';
 import swal from 'sweetalert';
 import firebase from '../firebase/firebase';
+import deleteOrder from '../controller/ordersChef';
 
 function OrdersChef() {
   const [orders, getOrders] = React.useState([]);
@@ -29,7 +30,26 @@ function OrdersChef() {
     });
   };
 
-  const deleteOrder = async (id) => {
+  // const deleteOrder = async (id) => {
+  //   swal({
+  //     title: '¿Estas seguro que quieres eliminar este pedido?',
+  //     icon: 'warning',
+  //     buttons: true,
+  //     dangerMode: true,
+  //   })
+  //     .then((willDelete) => {
+  //       if (willDelete) {
+  //         swal('Pedido eliminado con exito!', {
+  //           icon: 'success',
+  //         });
+  //         firebase.firestore().collection('pedidos').doc(id).delete();
+  //       } else {
+  //         swal('Continue');
+  //       }
+  //     });
+  // };
+
+  const handleDeleteOrder = (removeOrder) => {
     swal({
       title: '¿Estas seguro que quieres eliminar este pedido?',
       icon: 'warning',
@@ -41,16 +61,12 @@ function OrdersChef() {
           swal('Pedido eliminado con exito!', {
             icon: 'success',
           });
-          firebase.firestore().collection('pedidos').doc(id).delete();
+          deleteOrder(removeOrder);
         } else {
           swal('Continue');
         }
       });
   };
-
-  // const deleteOrder = (orderId) => {
-  //   firebase.firestore().collection('pedidos').doc(orderId).delete();
-  // };
 
   return (
     <>
@@ -90,7 +106,7 @@ function OrdersChef() {
                       <td>{order.hourEnd != null ? moment(order.hourEnd).format('LT') : ''}</td>
                       <td>{order.timeToCook !== '' ? moment(order.timeToCook).format('m') : ''}</td>
                       <td>{order.status === 'pending' ? <button onClick={() => completeOrder(order.id)}>Listo</button> : ''}</td>
-                      <td>{order.status === 'pending' ? <button onClick={() => deleteOrder(order.id)}>Cancelar</button> : ''}</td>
+                      <td>{order.status === 'pending' ? <button onClick={() => handleDeleteOrder(order.id)}>Cancelar</button> : ''}</td>
                     </tr>
                   ))}
                 </tbody>
