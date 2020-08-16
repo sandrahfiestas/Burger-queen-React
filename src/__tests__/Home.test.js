@@ -11,13 +11,4 @@ describe('Home', () => {
     const title = await screen.findByText('ORDEN DE PEDIDO');
     expect(title).toBeVisible();
   });
-
-  // test('renders component Kitchen', async () => {
-  //   render(<App />);
-  //   const button = await screen.findByRole('button', { name: 'icon_burger COCINA' });
-  //   fireEvent.click(button);
-
-  //   const title = await screen.findByText('COCINA');
-  //   expect(title).toBeVisible();
-  // });
 });
