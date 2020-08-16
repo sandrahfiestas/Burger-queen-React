@@ -38,4 +38,19 @@
 }
 
 
+@media (min-width: 768px) and (orientation: portrait) {
+    .home-container {
+        flex-direction: column;
+        justify-content: center;
+     }
+
+    .home-logo {
+        justify-content: center;
+    }
+
+    .logo-queen {
+        width: 90%;
+        height: 90%;
+    }
+  }
 
