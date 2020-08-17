@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable max-len */
 import React from 'react';
-import addOrder from '../controller/orders';
+import { addOrder } from '../controller/orders';
 import Clock from './Clock';
 import iconMore from '../images/icon_more.png';
 import iconLess from '../images/icon_less.png';
