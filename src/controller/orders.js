@@ -14,4 +14,16 @@ const getOrder = (callback) => firebase.firestore().collection('pedidos')
     callback(gettingOrders);
   }));
 
-export { addOrder, getOrder };
+const deleteOrder = (id) => firebase.firestore().collection('pedidos').doc(id).delete();
+
+// const deleteOrder = async (id) => {
+//   try {
+//     await firebase.firestore().collection('pedidos').doc(id).delete();
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// export default deleteOrder;
+
+export { addOrder, getOrder, deleteOrder };

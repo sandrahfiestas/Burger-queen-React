@@ -1,5 +1,10 @@
 import MockFirebase from 'mock-cloud-firestore';
-import { addOrder, getOrder } from '../controller/orders';
+import firebase from '../firebase/firebase';
+import {
+  addOrder,
+  getOrder,
+  // deleteOrder,
+} from '../controller/orders';
 
 // import React from 'react';
 // import { render, screen } from '@testing-library/react';
@@ -12,6 +17,7 @@ import { addOrder, getOrder } from '../controller/orders';
 //   expect(bntAdd.textContent).toBe('Agregar');
 // });
 
+/*
 const fixtureData = {
   __collection__: {
     pedidos: {
@@ -40,20 +46,47 @@ const fixtureData = {
     },
   },
 };
+*/
 
 const listOrder = {
-  products: '',
+  products: 'Café con leche',
   client: 'Cliente Dos',
-  numberTable: '',
+  numberTable: '2',
   status: 'pending',
   hourSend: '',
   hourEnd: '',
   timeToCook: '',
 };
 
-global.firebase = new MockFirebase(fixtureData, { isNaiveSnapshotListenerEnabled: true });
+// const listOrder = {
+//   __collection__: {
+//     pedidos: {
+//       __doc__: {
+//         order001: {
+//           products: '',
+//           client: 'Cliente Dos',
+//           numberTable: '',
+//           status: 'pending',
+//           hourSend: '',
+//           hourEnd: '',
+//           timeToCook: '',
+//         },
+//       },
+//     },
+//   },
+// };
 
-describe.only('addOrder', () => {
+beforeEach(() => {
+  firebase.mockClear();
+});
+
+global.firebase = new MockFirebase(listOrder, { isNaiveSnapshotListenerEnabled: true });
+
+afterEach(() => {
+  firebase.mockClear();
+});
+
+describe('addOrder', () => {
   it('Deberia de poder agregar una orden', (done) => addOrder(listOrder)
     .then(() => {
       const callback = (order) => { // order => gettingOrder
@@ -66,8 +99,16 @@ describe.only('addOrder', () => {
     }));
 });
 
-// it('works with async/await', async () => {
-//   expect.assertions(1);
-//   const data = await user.getUserName(4);
-//   expect(data).toEqual('Mark');
-// });
+/*
+describe('deleteOrder', () => {
+  it('Deberia de poder eliminar al Cliente Dos ', (done) => deleteOrder('Cliente Dos')
+    .then(() => {
+      const callback = (order) => {
+        const result = order.find((element) => element.client === 'Cliente Dos');
+        expect(result).toBe(undefined);
+        done();
+      };
+      getOrder(callback);
+    }));
+});
+*/
