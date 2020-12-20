@@ -50,80 +50,10 @@ costo total.
 
 ![almuerzo](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/almuerzo.jpg)
 
-El jefe de cocina puede ver los pedidos de los clientes en orden y marcar cuales están listos para saber qué se debe cocinar y avisar a los(as) mesesros(as) que un pedido está listo para servirlo a un cliente, asi como el tiempo que tomo en ser preparado dicho pedido.
+Finalmente, el jefe de cocina puede ver los pedidos de los clientes en orden y marcar cuales están listos para saber qué se debe cocinar y avisar a los(as) mesesros(as) que un pedido está listo para servirlo a un cliente, asi como el tiempo que tomo en ser preparado dicho pedido.
 
 ![cocina](https://github.com/sandrahfiestas/LIM012-fe-burger-queen/blob/develop/src/images/cocina.jpg)
 
-
-
----
-
-
-### HTML y CSS
-
-- [ ] HTML semántico
-- [ ] CSS flexbox
-- [ ] Sass
-- [ ] Maquetación
-
-### Frontend Development
-
-- [ ] Componentes
-- [ ] Manejo del estado
-
-### PWA
-
-- [ ] Concepto
-- [ ] Utilidad
-- [ ] Que es [Workbox](https://developers.google.com/web/tools/workbox)
-- [ ] Qué es un `serviceWorker`
-
-
-### React
-
-- [ ] [`JSX`](https://es.reactjs.org/docs/introducing-jsx.html)
-- [ ] [Componentes `class` y componentes `function`](https://es.reactjs.org/docs/components-and-props.html#function-and-class-components)
-- [ ] `props`
-- [ ] [Manejo de eventos](https://es.reactjs.org/docs/handling-events.html)
-- [ ] [Listas y keys](https://es.reactjs.org/docs/lists-and-keys.html)
-- [ ] [Renderizado condicional](https://es.reactjs.org/docs/conditional-rendering.html)
-- [ ] [Levantamiento de estados](https://es.reactjs.org/docs/lifting-state-up.html)
-- [ ] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
-- [ ] [`CSS` modules](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
-- [ ] [React Router](https://reacttraining.com/react-router/web)
-
-
-### Firebase
-
-- [ ] Firestore
-- [ ] Firebase security rules
-- [ ] Observables
-
-### Testing
-
-- [ ] Testeo de tus interfaces
-- [ ] Testeo de componentes
-- [ ] Testeo asíncrono
-- [ ] Mocking
-
-### Colaboración en Github
-
-- [ ] Branches
-- [ ] Pull Requests
-- [ ] Tags
-
-### Organización en Github
-
-- [ ] Projects
-- [ ] Issues
-- [ ] Labels
-- [ ] Milestones
-
-### Buenas prácticas de desarrollo
-
-- [ ] Modularización
-- [ ] Nomenclatura / Semántica
-- [ ] Linting
 
 ---
 
