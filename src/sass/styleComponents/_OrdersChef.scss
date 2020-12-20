@@ -20,4 +20,5 @@
     left: 42px;
     top: 86px;
     background: $white;
+    @include scroll;
 }
